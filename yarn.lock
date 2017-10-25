@@ -2326,16 +2326,16 @@ probot-app-migrations@1.0.2:
   dependencies:
     probot "^3.0.0"
 
-probot-app-pr-issue@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-issue/-/probot-app-pr-issue-1.0.2.tgz#1b771242be8387c9d287beb3985257c30e1a7685"
+probot-app-pr-issue@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-issue/-/probot-app-pr-issue-1.0.3.tgz#26224a02684a4e1f939b59b3ceb06e20ba6528b6"
   dependencies:
     issue-regex "^1.0.0"
     probot "^3.0.0"
 
-probot-app-pr-title@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.0.1.tgz#7cb89db00498e97650dbe60de88067125adc4d5e"
+probot-app-pr-title@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.0.2.tgz#7a08822ecc98f0b58e5e32f03d65dcf1109f8d75"
   dependencies:
     compromise "^10.7.2"
     probot "^3.0.0"
