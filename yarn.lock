@@ -2307,9 +2307,9 @@ private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
 
-probot-app-label-release-pr@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/probot-app-label-release-pr/-/probot-app-label-release-pr-1.0.2.tgz#79b95bb36786cc4762321b8c030ac907a49c21b3"
+probot-app-label-release-pr@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/probot-app-label-release-pr/-/probot-app-label-release-pr-1.0.3.tgz#7c1d732e75d02d8e2901548a8cd796f9bd8866d8"
   dependencies:
     probot "^3.0.0"
     semver "^5.4.1"
