@@ -10,7 +10,7 @@
     "probot-app-label-release-pr": "^1.0.2",
     "probot-app-merge-pr": "1.0.1",
     "probot-app-migrations": "1.0.2",
-    "probot-app-pr-issue": "1.0.2",
+    "probot-app-pr-issue": "1.0.3",
     "probot-app-pr-title": "1.0.2",
     "probot-app-release": "1.0.1",
     "probot-app-release-notes": "1.0.1",
