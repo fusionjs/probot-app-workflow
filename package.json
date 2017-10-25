@@ -1,0 +1,34 @@
+{
+  "name": "@graphene/probot-app-workflow",
+  "private": true,
+  "scripts": {
+    "start": "probot run",
+    "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) npm start"
+  },
+  "dependencies": {
+    "probot": "3.0.0",
+    "probot-app-label-release-pr": "^1.0.2",
+    "probot-app-merge-pr": "1.0.1",
+    "probot-app-migrations": "1.0.2",
+    "probot-app-pr-issue": "1.0.2",
+    "probot-app-pr-title": "1.0.1",
+    "probot-app-release": "1.0.1",
+    "probot-app-release-notes": "1.0.1",
+    "probot-app-todos": "1.0.1"
+  },
+  "probot": {
+    "apps": [
+      "probot-app-label-release-pr",
+      "probot-app-merge-pr",
+      "probot-app-migrations",
+      "probot-app-pr-issue",
+      "probot-app-pr-title",
+      "probot-app-release",
+      "probot-app-release-notes",
+      "probot-app-todos"
+    ]
+  },
+  "engines": {
+    "node": "8.6.0"
+  }
+}
