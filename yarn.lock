@@ -2340,9 +2340,9 @@ probot-app-pr-title@1.0.2:
     compromise "^10.7.2"
     probot "^3.0.0"
 
-probot-app-release-notes@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/probot-app-release-notes/-/probot-app-release-notes-1.0.1.tgz#85cb5697a3118fea61aca2042913929aac1c88ad"
+probot-app-release-notes@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/probot-app-release-notes/-/probot-app-release-notes-1.0.2.tgz#9cad7122b6699d1bbb64b314c5ae48c9db7dd561"
   dependencies:
     node-fetch "^1.7.3"
     probot "^3.0.0"
