@@ -1,5 +1,5 @@
 {
-  "name": "@graphene/probot-app-workflow",
+  "name": "probot-app-workflow",
   "private": true,
   "scripts": {
     "start": "probot run",
@@ -29,6 +29,6 @@
     ]
   },
   "engines": {
-    "node": "8.6.0"
+    "node": "8.8.1"
   }
 }
