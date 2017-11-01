@@ -2320,9 +2320,9 @@ probot-app-merge-pr@1.0.1:
   dependencies:
     probot "^3.0.0"
 
-probot-app-migrations@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/probot-app-migrations/-/probot-app-migrations-1.0.2.tgz#a7296fb46886163e3b4baa85d7f3575a9f01bc50"
+probot-app-migrations@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/probot-app-migrations/-/probot-app-migrations-1.0.3.tgz#2e81c31171a67225ba71c005277323567014c114"
   dependencies:
     probot "^3.0.0"
 
