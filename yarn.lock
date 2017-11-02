@@ -2326,9 +2326,9 @@ probot-app-migrations@1.0.3:
   dependencies:
     probot "^3.0.0"
 
-probot-app-pr-issue@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-issue/-/probot-app-pr-issue-1.0.4.tgz#7745edd2ad32b2c5d13ddb4e6d79ba1473796ccf"
+probot-app-pr-issue@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-issue/-/probot-app-pr-issue-1.0.5.tgz#86b6b81fd3d6a743d9d3373dae58d8be5ca2b351"
   dependencies:
     issue-regex "^1.0.0"
     probot "^3.0.0"
