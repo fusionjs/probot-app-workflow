@@ -2359,9 +2359,9 @@ probot-app-todos@1.0.3:
   dependencies:
     probot "^3.0.0"
 
-probot@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/probot/-/probot-3.0.1.tgz#ab5bb1882cbae3b1ccadfe7d94a7a4b3d12eb383"
+probot@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/probot/-/probot-3.0.2.tgz#449b8d70c8d1c4b6f3cc3b60e466c5e4fbdc03a1"
   dependencies:
     bottleneck "^1.16.0"
     bunyan "^1.8.12"
