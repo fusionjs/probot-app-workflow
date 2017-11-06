@@ -555,11 +555,11 @@ commander@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
 
-compromise@^10.7.2:
-  version "10.7.2"
-  resolved "https://registry.yarnpkg.com/compromise/-/compromise-10.7.2.tgz#a87e641f1e188f399160e929fd35041bfc6ca075"
+compromise@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/compromise/-/compromise-11.1.0.tgz#ee423b8c478a374c7dab0c305d4a46d68a60014b"
   dependencies:
-    efrt "1.1.1"
+    efrt-unpack "2.0.3"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -720,9 +720,9 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-efrt@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/efrt/-/efrt-1.1.1.tgz#dfed3588492ba922f798dada0b20ccf07f0b4c59"
+efrt-unpack@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/efrt-unpack/-/efrt-unpack-2.0.3.tgz#6ada57793e3dda16d182f6a371fbe3d135af9dc2"
 
 ejs@^2.5.7:
   version "2.5.7"
@@ -2333,11 +2333,11 @@ probot-app-pr-issue@1.0.6:
     issue-regex "^1.0.0"
     probot "^3.0.0"
 
-probot-app-pr-title@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.0.4.tgz#c910b0a9ad9839ccea699265bfc56e4d6ebce5fc"
+probot-app-pr-title@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.0.5.tgz#ac6975a76723f0a0b3afbaa3d34f8c033816e212"
   dependencies:
-    compromise "^10.7.2"
+    compromise "^11.1.0"
     probot "^3.0.0"
 
 probot-app-release-notes@1.0.6:
