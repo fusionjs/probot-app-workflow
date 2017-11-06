@@ -2314,6 +2314,12 @@ probot-app-label-release-pr@1.0.4:
     probot "^3.0.0"
     semver "^5.4.1"
 
+probot-app-license@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/probot-app-license/-/probot-app-license-1.0.0.tgz#36943732a27308df8f58f0f176cf0139d68ce326"
+  dependencies:
+    probot "^3.0.0"
+
 probot-app-merge-pr@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/probot-app-merge-pr/-/probot-app-merge-pr-1.0.2.tgz#3ec1384114b5f6af0ea6d1c30b864afe8ee7c5c9"
