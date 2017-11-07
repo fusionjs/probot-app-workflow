@@ -20,6 +20,7 @@
   "probot": {
     "apps": [
       "probot-app-label-release-pr",
+      "probot-app-license",
       "probot-app-merge-pr",
       "probot-app-migrations",
       "probot-app-pr-issue",
