@@ -2345,9 +2345,9 @@ probot-app-pr-issue@1.0.6:
     issue-regex "^1.0.0"
     probot "^3.0.0"
 
-probot-app-pr-title@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.0.5.tgz#ac6975a76723f0a0b3afbaa3d34f8c033816e212"
+probot-app-pr-title@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.0.6.tgz#84c59c23720d2250200657ad1333be98fb3404f5"
   dependencies:
     compromise "^11.1.0"
     probot "^3.0.0"
