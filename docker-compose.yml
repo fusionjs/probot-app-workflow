@@ -1,0 +1,14 @@
+version: '2'
+services:
+  probot-app-workflow:
+    build: .
+    volumes:
+      - .:/probot-app-workflow
+      - /probot-app-workflow/node_modules/
+    environment:
+      - NOW_TOKEN
+      - GH_TOKEN
+      - BUILDKITE
+      - BUILDKITE_REPO
+      - BUILDKITE_BRANCH
+      - BUILDKITE_PULL_REQUEST
