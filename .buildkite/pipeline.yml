@@ -1,0 +1,18 @@
+steps:
+  - name: ":docker: :package:"
+    plugins:
+      docker-compose#v1.5.2:
+        build: probot-app-workflow
+        image-repository: 296822479253.dkr.ecr.us-east-2.amazonaws.com/fusionjs
+  - wait
+  - name: ":green_salad:"
+    command: "greenkeeper-lockfile-upload"
+    plugins:
+      docker-compose#v1.5.2:
+        run: probot-app-workflow
+  - name: ":outbox_tray:"
+    command: "scripts/deploy.sh"
+    branches: master
+    plugins:
+      docker-compose#v1.5.2:
+        run: probot-app-workflow
