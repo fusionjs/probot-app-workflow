@@ -6,7 +6,7 @@ steps:
         image-repository: 296822479253.dkr.ecr.us-east-2.amazonaws.com/fusionjs
   - wait
   - name: ":green_salad:"
-    command: "greenkeeper-lockfile-upload"
+    command: ".buildkite/greenkeeper"
     plugins:
       docker-compose#v1.5.2:
         run: probot-app-workflow
