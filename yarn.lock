@@ -2365,9 +2365,9 @@ probot-app-release@1.0.3:
   dependencies:
     probot "^3.0.0"
 
-probot-app-todos@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/probot-app-todos/-/probot-app-todos-1.0.4.tgz#35af03ddb50a893dcdf50e106a098338b8fb8470"
+probot-app-todos@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/probot-app-todos/-/probot-app-todos-1.0.5.tgz#68242d54c8ca4875d19570bdafa37795d0555f15"
   dependencies:
     probot "^3.0.0"
 
