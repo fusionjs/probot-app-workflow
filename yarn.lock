@@ -2359,9 +2359,9 @@ probot-app-release-notes@1.0.6:
     node-fetch "^1.7.3"
     probot "^3.0.0"
 
-probot-app-release@1.0.3-beta.0:
-  version "1.0.3-beta.0"
-  resolved "https://registry.yarnpkg.com/probot-app-release/-/probot-app-release-1.0.3-beta.0.tgz#f9cb7b28c57f784d06fb3f4f9cc93952fe05066c"
+probot-app-release@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/probot-app-release/-/probot-app-release-1.0.3.tgz#0fe71be250e98b74dcf004c1d16cd468c467f22f"
   dependencies:
     probot "^3.0.0"
 
