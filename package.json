@@ -30,6 +30,7 @@
       "probot-app-pr-title",
       "probot-app-release",
       "probot-app-release-notes",
+      "probot-app-release-pr-compare",
       "probot-app-todos"
     ]
   },
