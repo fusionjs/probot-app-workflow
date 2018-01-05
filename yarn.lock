@@ -562,8 +562,8 @@ commander@^2.11.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
 
 compromise@^11.1.0:
-  version "11.1.0"
-  resolved "https://registry.yarnpkg.com/compromise/-/compromise-11.1.0.tgz#ee423b8c478a374c7dab0c305d4a46d68a60014b"
+  version "11.2.1"
+  resolved "https://registry.yarnpkg.com/compromise/-/compromise-11.2.1.tgz#fa04c0167ce9e8ca849e6e4362e3f8124241afb7"
   dependencies:
     efrt-unpack "2.0.3"
 
@@ -2477,9 +2477,9 @@ probot-app-pr-issue@1.0.6:
     issue-regex "^1.0.0"
     probot "^3.0.0"
 
-probot-app-pr-title@1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.0.7.tgz#7888601a8088a99d5eba2872362a423226b5037a"
+probot-app-pr-title@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.1.1.tgz#9a93f7880b9d7be54607c5775f88be8f1d7873f4"
   dependencies:
     compromise "^11.1.0"
     probot "^3.0.0"
