@@ -7,17 +7,17 @@
   },
   "dependencies": {
     "probot": "4.0.0",
-    "probot-app-deploy": "^1.0.0",
+    "probot-app-deploy": "1.0.1",
     "probot-app-label-release-pr": "1.0.4",
     "probot-app-license": "1.0.2",
     "probot-app-merge-pr": "1.0.2",
     "probot-app-migrations": "1.0.5",
     "probot-app-pr-issue": "1.0.6",
-    "probot-app-pr-title": "1.0.8",
-    "probot-app-release": "1.0.3",
+    "probot-app-pr-title": "1.0.7",
+    "probot-app-release": "1.0.4",
     "probot-app-release-notes": "1.0.6",
-    "probot-app-release-pr-compare": "^1.0.1",
-    "probot-app-todos": "^1.0.5"
+    "probot-app-release-pr-compare": "1.0.1",
+    "probot-app-todos": "1.0.5"
   },
   "probot": {
     "apps": [
