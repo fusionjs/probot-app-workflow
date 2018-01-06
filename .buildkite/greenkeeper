@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-greenkeeper-lockfile-update
-greenkeeper-lockfile-upload
