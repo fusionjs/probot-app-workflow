@@ -2439,7 +2439,7 @@ private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
 
-probot-app-deploy@^1.0.3:
+probot-app-deploy@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/probot-app-deploy/-/probot-app-deploy-1.0.3.tgz#7b2190ece4afde96a577c88307f8359fa17839ab"
   dependencies:
