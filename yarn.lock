@@ -562,8 +562,8 @@ commander@^2.11.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
 
 compromise@^11.1.0:
-  version "11.2.1"
-  resolved "https://registry.yarnpkg.com/compromise/-/compromise-11.2.1.tgz#fa04c0167ce9e8ca849e6e4362e3f8124241afb7"
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/compromise/-/compromise-11.2.2.tgz#705d8ff78637e69d5a2791cbbca0a67684158b6a"
   dependencies:
     efrt-unpack "2.0.3"
 
@@ -2445,6 +2445,12 @@ probot-app-deploy@1.0.3:
   dependencies:
     probot "^3.0.0"
 
+probot-app-label-docs-pr@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/probot-app-label-docs-pr/-/probot-app-label-docs-pr-1.0.0.tgz#171d365345b028d07809e32de1e1bc9a65fea4e9"
+  dependencies:
+    probot "^4.0.0"
+
 probot-app-label-release-pr@1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/probot-app-label-release-pr/-/probot-app-label-release-pr-1.0.4.tgz#0cf915b85f55c847bf040d86bcdc307163fcc7dd"
@@ -2510,7 +2516,7 @@ probot-app-todos@1.0.5:
   dependencies:
     probot "^3.0.0"
 
-probot@4.0.0:
+probot@4.0.0, probot@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/probot/-/probot-4.0.0.tgz#13be6f3e34f761ddf41760225b66a6fa691a1581"
   dependencies:
