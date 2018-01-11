@@ -2445,9 +2445,9 @@ probot-app-deploy@1.0.3:
   dependencies:
     probot "^3.0.0"
 
-probot-app-label-docs-pr@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/probot-app-label-docs-pr/-/probot-app-label-docs-pr-1.0.1.tgz#0ce2933152b29c5bb56678defc5f6d98cb192c75"
+probot-app-label-docs-pr@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/probot-app-label-docs-pr/-/probot-app-label-docs-pr-1.0.2.tgz#c46ea8144b0e37d1cf3099ab3e1c884c0e84d4ff"
   dependencies:
     probot "^4.0.0"
 
