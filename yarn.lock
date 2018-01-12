@@ -2917,11 +2917,11 @@ probot-app-license@1.0.2:
   dependencies:
     probot "^3.0.0"
 
-probot-app-merge-pr@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/probot-app-merge-pr/-/probot-app-merge-pr-1.0.2.tgz#3ec1384114b5f6af0ea6d1c30b864afe8ee7c5c9"
+probot-app-merge-pr@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/probot-app-merge-pr/-/probot-app-merge-pr-1.0.3.tgz#bb38fe132e03cd9f7c6fea467ab28346731b5be2"
   dependencies:
-    probot "^3.0.0"
+    probot "4.0.0"
 
 probot-app-migrations@1.0.5:
   version "1.0.5"
@@ -2968,6 +2968,31 @@ probot-app-todos@1.0.5:
   resolved "https://registry.yarnpkg.com/probot-app-todos/-/probot-app-todos-1.0.5.tgz#68242d54c8ca4875d19570bdafa37795d0555f15"
   dependencies:
     probot "^3.0.0"
+
+probot@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/probot/-/probot-4.0.0.tgz#13be6f3e34f761ddf41760225b66a6fa691a1581"
+  dependencies:
+    bottleneck "^1.16.0"
+    bunyan "^1.8.12"
+    bunyan-format "^0.2.1"
+    bunyan-sentry-stream "^1.1.0"
+    cache-manager "^2.4.0"
+    commander "^2.11.0"
+    dotenv "~4.0.0"
+    eventsource "^1.0.5"
+    express "^4.16.2"
+    github "^12.0.3"
+    github-webhook-handler "^0.7.0"
+    hbs "^4.0.1"
+    jest "^21.2.1"
+    js-yaml "^3.9.1"
+    jsonwebtoken "^8.1.0"
+    pkg-conf "^2.0.0"
+    promise-events "^0.1.3"
+    raven "^2.1.2"
+    resolve "^1.4.0"
+    semver "^5.4.1"
 
 probot@4.1.0, probot@^4.0.0:
   version "4.1.0"
