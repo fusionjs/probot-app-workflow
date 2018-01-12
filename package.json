@@ -1,6 +1,7 @@
 {
   "name": "probot-app-workflow",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "start": "probot run",
     "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) npm start"
