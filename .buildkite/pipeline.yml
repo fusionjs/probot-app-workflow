@@ -3,7 +3,9 @@ steps:
     plugins:
       docker-compose#v1.5.2:
         build: probot-app-workflow
-        image-repository: 296822479253.dkr.ecr.us-east-2.amazonaws.com/fusionjs
+        image-repository: 027047743804.dkr.ecr.us-east-2.amazonaws.com/uber
+    agents:
+      queue: builders
   - wait
   - name: ":rocket:"
     command: "scripts/deploy.sh"
@@ -13,3 +15,6 @@ steps:
     plugins:
       docker-compose#v1.5.2:
         run: probot-app-workflow
+    agents:
+      queue: workers
+
