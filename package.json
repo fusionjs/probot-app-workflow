@@ -34,10 +34,14 @@
       "probot-app-release",
       "probot-app-release-notes",
       "probot-app-release-pr-compare",
-      "probot-app-todos"
+      "probot-app-todos",
+      "./src/release-verification.js"
     ]
   },
   "engines": {
     "node": "^8.9.0"
+  },
+  "devDependencies": {
+    "smee-client": "^1.0.1"
   }
 }
