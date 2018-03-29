@@ -38,7 +38,6 @@ module.exports = robot => {
           "name": "${pr.user.login}"
         }
       }'`;
-
     exec(curlCommand, (error, stdout) => {
       if (error !== null) {
         // eslint-disable-next-line no-console
@@ -52,6 +51,7 @@ module.exports = robot => {
       );
     });
 
+    // TODO(#72) This should be pending until the verification run is complete
     // set status to success
     setStatus(context, {
       state: 'success',

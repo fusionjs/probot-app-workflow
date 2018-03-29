@@ -7,6 +7,15 @@ steps:
     agents:
       queue: builders
   - wait
+  - name: ":jest:"
+    command: "yarn test"
+    concurrency_group: "deploy"
+    plugins:
+      docker-compose#v1.5.2:
+        run: probot-app-workflow
+    agents:
+      queue: workers
+  - wait
   - name: ":rocket:"
     command: "scripts/deploy.sh"
     concurrency: 1

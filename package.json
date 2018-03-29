@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "probot run",
+    "test": "jest",
     "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) npm start"
   },
   "dependencies": {
@@ -42,6 +43,18 @@
     "node": "^8.9.0"
   },
   "devDependencies": {
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "jest-cli": "^22.4.3",
+    "jest-environment-node": "22.4.3",
     "smee-client": "^1.0.1"
+  },
+  "jest": {
+    "cache": false,
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "testRegex": "src/.*__tests__/.*.test.js"
   }
 }
