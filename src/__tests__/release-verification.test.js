@@ -2,12 +2,14 @@ import {createRobot} from 'probot';
 import app from '../release-verification';
 
 import nonReleasePayload from './fixtures/non-release-payload.json';
+import prereleasePayload from './fixtures/prerelease-payload.json';
 import releasePayload from './fixtures/release-payload.json';
 
 jest.mock('child_process', () => {
   return {
-    exec: (command, callback) =>
-      callback(null, '{"web_url": "fusion-verification-url"}'),
+    exec: (command, callback) => {
+      callback(null, '{"web_url": "fusion-verification-url"}');
+    },
   };
 });
 
@@ -44,12 +46,11 @@ describe('release-verification', () => {
     expect(statusCalls[1][0].state).toBe('success');
   });
 
-  it('release tag applied', async () => {
+  it('triggers buildkite and sets status for prerelease', async () => {
     await robot.receive({
       event: 'pull_request',
-      payload: releasePayload,
+      payload: prereleasePayload,
     });
-    // Should immediately set success (for now), and comment.
     const statusCalls = github.repos.createStatus.mock.calls;
     expect(github.repos.createStatus).toHaveBeenCalled();
     expect(github.issues.createComment.mock.calls.length).toBe(1);
@@ -59,5 +60,21 @@ describe('release-verification', () => {
     expect(statusCalls.length).toBe(2);
     expect(statusCalls[0][0].state).toBe('pending');
     expect(statusCalls[1][0].state).toBe('success');
+  });
+
+  it('triggers buildkite and sets status for release', async () => {
+    await robot.receive({
+      event: 'pull_request',
+      payload: releasePayload,
+    });
+    const statusCalls = github.repos.createStatus.mock.calls;
+    expect(github.repos.createStatus).toHaveBeenCalled();
+    expect(github.issues.createComment.mock.calls.length).toBe(1);
+    expect(github.issues.createComment.mock.calls[0][0].body).toContain(
+      'fusion-verification-url'
+    );
+    expect(statusCalls.length).toBe(2);
+    expect(statusCalls[0][0].state).toBe('pending');
+    expect(statusCalls[1][0].state).toBe('pending');
   });
 });

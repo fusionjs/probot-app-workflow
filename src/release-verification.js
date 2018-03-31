@@ -27,6 +27,7 @@ module.exports = robot => {
       });
     }
 
+    const prerelease = isPrerelease(pr.title);
     const curlCommand = `curl \
     -H "Authorization: Bearer ${process.env.BUILDKITE_TOKEN}" \
     -X POST "https://api.buildkite.com/v2/organizations/uberopensource/pipelines/fusion-release-verification/builds" \
@@ -36,6 +37,13 @@ module.exports = robot => {
         "message": "${pr.base.repo.name}, ${pr.title} - release verification",
         "author": {
           "name": "${pr.user.login}"
+        },
+        "meta_data": {
+          "release-pr-number": "${pr.number}",
+          "release-pr-head-sha": "${pr.head.sha}",
+          "release-pr-head-repo-full-name": "${pr.head.repo.full_name}",
+          "release-pr-base-repo-full-name": "${pr.base.repo.full_name}",
+          "release-pr-prerelease": "${String(prerelease)}"
         }
       }'`;
     exec(curlCommand, (error, stdout) => {
@@ -51,14 +59,26 @@ module.exports = robot => {
       );
     });
 
-    // TODO(#72) This should be pending until the verification run is complete
-    // set status to success
-    setStatus(context, {
-      state: 'success',
-      description: 'Verification run has been started.',
-    });
+    // Ignore verification run for prereleases
+    if (prerelease) {
+      setStatus(context, {
+        state: 'success',
+        description: 'Verification run for prerelease not required.',
+      });
+    } else {
+      setStatus(context, {
+        state: 'pending',
+        description: 'Waiting for verification run to finish.',
+      });
+    }
   }
 };
+
+// PR titles should have a dash in it to be considered a prerelease.
+// E.g., v1.0.0-alpha1
+function isPrerelease(prTitle) {
+  return /Release v.*\-.*/.test(prTitle);
+}
 
 async function setStatus(context, {state, description}) {
   const {github} = context;
