@@ -55,6 +55,6 @@
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },
-    "testRegex": "src/.*__tests__/.*.test.js"
+    "testRegex": "src/.*__tests__/.*.test.js$"
   }
 }
