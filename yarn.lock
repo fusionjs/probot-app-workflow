@@ -2095,10 +2095,6 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-issue-regex@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/issue-regex/-/issue-regex-1.0.0.tgz#54fccf62ea65e4f47207572b8b78c1b3d9de5f77"
-
 istanbul-api@^1.1.1, istanbul-api@^1.1.14:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/istanbul-api/-/istanbul-api-1.2.1.tgz#0c60a0515eb11c7d65c6b50bba2c6e999acd8620"
@@ -3725,13 +3721,6 @@ probot-app-migrations@1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/probot-app-migrations/-/probot-app-migrations-1.0.5.tgz#b44ffdbb5bb8d1ae7439b7b2ae53b0ee4d921667"
   dependencies:
-    probot "^3.0.0"
-
-probot-app-pr-issue@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-issue/-/probot-app-pr-issue-1.1.0.tgz#3d20084dcd451639d6fb18f6facdcf52d95d4ec9"
-  dependencies:
-    issue-regex "^1.0.0"
     probot "^3.0.0"
 
 probot-app-pr-title@1.1.2:
