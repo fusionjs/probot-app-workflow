@@ -2,6 +2,7 @@ import {createRobot} from 'probot';
 import app from '../release-verification';
 
 import nonReleasePayload from './fixtures/non-release-payload.json';
+import nonReleaseOpenedPayload from './fixtures/non-release-opened-payload.json';
 import prereleasePayload from './fixtures/prerelease-payload.json';
 import releasePayload from './fixtures/release-payload.json';
 
@@ -30,6 +31,18 @@ describe('release-verification', () => {
     };
     // Passes the mocked out GitHub API into out robot instance
     robot.auth = () => Promise.resolve(github);
+  });
+
+  it('sets status to success for non-release payload', async () => {
+    await robot.receive({
+      event: 'pull_request',
+      payload: nonReleaseOpenedPayload,
+    });
+    // Should immediately set success
+    const statusCalls = github.repos.createStatus.mock.calls;
+    expect(github.repos.createStatus).toHaveBeenCalled();
+    expect(statusCalls.length).toBe(1);
+    expect(statusCalls[0][0].state).toBe('success');
   });
 
   it('non-release tag applied', async () => {

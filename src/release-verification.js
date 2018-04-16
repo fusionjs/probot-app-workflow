@@ -5,9 +5,28 @@
  */
 
 const exec = require('child_process').exec;
+const parseTitle = require('probot-app-label-release-pr/parse-title.js');
 
 module.exports = robot => {
+  robot.on('pull_request.opened', nonReleaseStatus);
+  robot.on('pull_request.edited', nonReleaseStatus);
   robot.on('pull_request.labeled', check);
+
+  /**
+   * Updates the release-verification status context for non-release PRs
+   * We auto-pass the status so we can block on this status across repos.
+   */
+  async function nonReleaseStatus(context) {
+    const {github} = context;
+    const pr = context.payload.pull_request;
+    const isRelease = parseTitle(pr.title);
+    if (!isRelease) {
+      return setStatus(context, {
+        state: 'success',
+        description: 'Release verification not required for this PR.',
+      });
+    }
+  }
 
   async function check(context) {
     const {github} = context;
