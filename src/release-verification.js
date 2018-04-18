@@ -9,7 +9,9 @@ const parseTitle = require('probot-app-label-release-pr/parse-title.js');
 
 module.exports = robot => {
   robot.on('pull_request.opened', nonReleaseStatus);
+  robot.on('pull_request.reopened', nonReleaseStatus);
   robot.on('pull_request.edited', nonReleaseStatus);
+  robot.on('pull_request.synchronize', nonReleaseStatus);
   robot.on('pull_request.labeled', check);
 
   /**
