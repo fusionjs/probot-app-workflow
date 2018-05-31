@@ -10,9 +10,9 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@octokit/rest@15.2.0":
-  version "15.2.0"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-15.2.0.tgz#85eb85e2baa0e5236e99a1643f9f6bec536e8f45"
+"@octokit/rest@^15.6.0":
+  version "15.8.1"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-15.8.1.tgz#8bcdece90026d3af5edd73bd49a8732cb3801d29"
   dependencies:
     before-after-hook "^1.1.0"
     btoa-lite "^1.0.0"
@@ -1421,6 +1421,10 @@ express-async-errors@2.1.1:
   resolved "https://registry.yarnpkg.com/express-async-errors/-/express-async-errors-2.1.1.tgz#0d3ba5a5af8747ec6e45093f8bf064364b3c37a1"
   dependencies:
     express "^4.16.2"
+
+express-async-errors@^2.1.0:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/express-async-errors/-/express-async-errors-2.1.2.tgz#a5692a0763904109f27d9649b4f827cf89100f53"
 
 express@^4.15.4, express@^4.16.2:
   version "4.16.2"
@@ -3805,11 +3809,11 @@ probot@5.0.1:
     resolve "^1.4.0"
     semver "^5.4.1"
 
-probot@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/probot/-/probot-6.1.0.tgz#dc65dbfbb2e83ca0b77b5f22241df88c408dfede"
+probot@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/probot/-/probot-6.2.0.tgz#9c6d743dd172553db2bb687907cee11e9dc99b58"
   dependencies:
-    "@octokit/rest" "15.2.0"
+    "@octokit/rest" "^15.6.0"
     "@octokit/webhooks" "^3.1.1"
     bottleneck "^2.2.0"
     bunyan "^1.8.12"
@@ -3819,8 +3823,7 @@ probot@6.1.0:
     commander "^2.11.0"
     dotenv "~5.0.0"
     express "^4.16.2"
-    express-async-errors "2.1.1"
-    github-webhook-handler "^0.7.0"
+    express-async-errors "^2.1.0"
     hbs "^4.0.1"
     js-yaml "^3.9.1"
     jsonwebtoken "^8.1.0"
