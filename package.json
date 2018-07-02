@@ -44,7 +44,7 @@
     "babel-jest": "^23.0.0",
     "babel-preset-env": "^1.6.1",
     "jest-cli": "^23.0.0",
-    "jest-environment-node": "23.1.0",
+    "jest-environment-node": "23.2.0",
     "smee-client": "^1.0.1"
   },
   "jest": {
