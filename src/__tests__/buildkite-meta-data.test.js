@@ -1,4 +1,4 @@
-import {createRobot} from 'probot';
+import {Application} from 'probot';
 import app from '../release-verification';
 
 import releasePayload from './fixtures/release-payload.json';
@@ -16,8 +16,8 @@ describe('buildkite meta-data', () => {
   let github;
 
   beforeEach(() => {
-    robot = createRobot();
-    app(robot);
+    robot = new Application();
+    robot.load(app);
     github = {
       issues: {
         createComment: jest.fn(),
