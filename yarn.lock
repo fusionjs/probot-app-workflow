@@ -4207,9 +4207,9 @@ probot-app-migrations@1.0.5:
   dependencies:
     probot "^3.0.0"
 
-probot-app-pr-title@1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.1.4.tgz#9fc6be06da52f0aa8e1d69a7b81739a09226f6d7"
+probot-app-pr-title@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.1.5.tgz#f0083adae365ec37d12ebb59a809000cd3cf55cc"
   dependencies:
     compromise "11.5.3"
     probot "5.0.1"
