@@ -8,7 +8,7 @@
     "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) npm start"
   },
   "dependencies": {
-    "probot": "6.2.0",
+    "probot": "7.0.0",
     "probot-app-deploy": "1.0.3",
     "probot-app-label-docs-pr": "1.0.2",
     "probot-app-label-release-pr": "1.0.4",
@@ -41,11 +41,11 @@
     "node": "^8.9.0"
   },
   "devDependencies": {
-    "babel-jest": "^23.0.0",
-    "babel-preset-env": "^1.6.1",
-    "jest-cli": "^23.0.0",
-    "jest-environment-node": "23.2.0",
-    "smee-client": "^1.0.1"
+    "babel-jest": "^23.2.0",
+    "babel-preset-env": "^1.7.0",
+    "jest-cli": "^23.3.0",
+    "jest-environment-node": "23.3.0",
+    "smee-client": "^1.0.2"
   },
   "jest": {
     "cache": false,
