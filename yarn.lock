@@ -2766,12 +2766,12 @@ jest-environment-jsdom@^23.3.0:
     jest-util "^23.3.0"
     jsdom "^11.5.1"
 
-jest-environment-node@23.3.0, jest-environment-node@^23.3.0:
-  version "23.3.0"
-  resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-23.3.0.tgz#1e8df21c847aa5d03b76573f0dc16fcde5034c32"
+jest-environment-node@23.4.0:
+  version "23.4.0"
+  resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-23.4.0.tgz#57e80ed0841dea303167cce8cd79521debafde10"
   dependencies:
     jest-mock "^23.2.0"
-    jest-util "^23.3.0"
+    jest-util "^23.4.0"
 
 jest-environment-node@^21.2.1:
   version "21.2.1"
@@ -2786,6 +2786,13 @@ jest-environment-node@^22.1.2:
   dependencies:
     jest-mock "^22.1.0"
     jest-util "^22.1.2"
+
+jest-environment-node@^23.3.0:
+  version "23.3.0"
+  resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-23.3.0.tgz#1e8df21c847aa5d03b76573f0dc16fcde5034c32"
+  dependencies:
+    jest-mock "^23.2.0"
+    jest-util "^23.3.0"
 
 jest-get-type@^21.2.0:
   version "21.2.0"
@@ -2935,6 +2942,16 @@ jest-message-util@^23.3.0:
     "@babel/code-frame" "^7.0.0-beta.35"
     chalk "^2.0.1"
     micromatch "^3.1.10"
+    slash "^1.0.0"
+    stack-utils "^1.0.1"
+
+jest-message-util@^23.4.0:
+  version "23.4.0"
+  resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-23.4.0.tgz#17610c50942349508d01a3d1e0bda2c079086a9f"
+  dependencies:
+    "@babel/code-frame" "^7.0.0-beta.35"
+    chalk "^2.0.1"
+    micromatch "^2.3.11"
     slash "^1.0.0"
     stack-utils "^1.0.1"
 
@@ -3200,6 +3217,19 @@ jest-util@^23.3.0:
     graceful-fs "^4.1.11"
     is-ci "^1.0.10"
     jest-message-util "^23.3.0"
+    mkdirp "^0.5.1"
+    slash "^1.0.0"
+    source-map "^0.6.0"
+
+jest-util@^23.4.0:
+  version "23.4.0"
+  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-23.4.0.tgz#4d063cb927baf0a23831ff61bec2cbbf49793561"
+  dependencies:
+    callsites "^2.0.0"
+    chalk "^2.0.1"
+    graceful-fs "^4.1.11"
+    is-ci "^1.0.10"
+    jest-message-util "^23.4.0"
     mkdirp "^0.5.1"
     slash "^1.0.0"
     source-map "^0.6.0"
