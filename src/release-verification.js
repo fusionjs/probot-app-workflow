@@ -49,24 +49,25 @@ module.exports = robot => {
     }
 
     const prerelease = isPrerelease(pr.title);
+    const curlObject = {
+      commit: 'HEAD',
+      branch: 'master',
+      message: `${pr.base.repo.name}, ${pr.title} - release verification`,
+      author: {
+        name: pr.user.login,
+      },
+      meta_data: {
+        'release-pr-number': String(pr.number),
+        'release-pr-head-sha': pr.head.sha,
+        'release-pr-head-repo-full-name': pr.head.repo.full_name,
+        'release-pr-base-repo-full-name': pr.base.repo.full_name,
+        'release-pr-prerelease': String(prerelease),
+      },
+    };
     const curlCommand = `curl \
     -H "Authorization: Bearer ${process.env.BUILDKITE_TOKEN}" \
     -X POST "https://api.buildkite.com/v2/organizations/uberopensource/pipelines/fusion-release-verification/builds" \
-      -d '{
-        "commit": "HEAD",
-        "branch": "master",
-        "message": "${pr.base.repo.name}, ${pr.title} - release verification",
-        "author": {
-          "name": "${pr.user.login}"
-        },
-        "meta_data": {
-          "release-pr-number": "${pr.number}",
-          "release-pr-head-sha": "${pr.head.sha}",
-          "release-pr-head-repo-full-name": "${pr.head.repo.full_name}",
-          "release-pr-base-repo-full-name": "${pr.base.repo.full_name}",
-          "release-pr-prerelease": "${String(prerelease)}"
-        }
-      }'`;
+      -d '${JSON.stringify(curlObject)}'`;
     exec(curlCommand, (error, stdout) => {
       if (error !== null) {
         // eslint-disable-next-line no-console
