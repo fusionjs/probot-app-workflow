@@ -4219,6 +4219,13 @@ probot-app-migrations@1.0.5:
   dependencies:
     probot "^3.0.0"
 
+probot-app-pr-label@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-label/-/probot-app-pr-label-1.0.0.tgz#b58a2c24cc2efe6cd261353303dfd1787149eabc"
+  dependencies:
+    probot "^7.0.1"
+    semver "5.5.0"
+
 probot-app-pr-title@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.1.5.tgz#f0083adae365ec37d12ebb59a809000cd3cf55cc"
@@ -4301,7 +4308,7 @@ probot@5.0.1:
     resolve "^1.4.0"
     semver "^5.4.1"
 
-probot@7.0.1:
+probot@7.0.1, probot@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/probot/-/probot-7.0.1.tgz#8ee68e0f39b25b840243c7a8b9ae1ce7641fb403"
   dependencies:
@@ -4772,7 +4779,7 @@ sax@^1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0:
+"semver@2 || 3 || 4 || 5", semver@5.5.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
 
