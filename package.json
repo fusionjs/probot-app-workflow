@@ -8,6 +8,7 @@
     "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) npm start"
   },
   "dependencies": {
+    "node-fetch": "^2.2.0",
     "probot": "7.0.1",
     "probot-app-deploy": "1.0.3",
     "probot-app-label-docs-pr": "1.0.2",
@@ -15,12 +16,12 @@
     "probot-app-license": "1.0.2",
     "probot-app-merge-pr": "1.0.3",
     "probot-app-migrations": "1.0.5",
+    "probot-app-pr-label": "1.0.1",
     "probot-app-pr-title": "^1.1.5",
     "probot-app-release": "1.0.4",
     "probot-app-release-notes": "1.0.6",
     "probot-app-release-pr-compare": "1.0.1",
-    "probot-app-todos": "1.0.5",
-    "probot-app-pr-label": "1.0.1"
+    "probot-app-todos": "1.0.5"
   },
   "probot": {
     "apps": [
