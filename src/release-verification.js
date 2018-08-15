@@ -49,6 +49,20 @@ module.exports = robot => {
     }
 
     const prerelease = isPrerelease(pr.title);
+
+    // Ignore verification run for prereleases
+    if (prerelease) {
+      setStatus(context, {
+        state: 'success',
+        description: 'Verification run for prerelease not required.',
+      });
+    } else {
+      setStatus(context, {
+        state: 'pending',
+        description: 'Waiting for verification run to finish.',
+      });
+    }
+
     const payload = {
       commit: 'HEAD',
       branch: 'master',
@@ -89,19 +103,6 @@ module.exports = robot => {
         body: `Triggered Fusion.js build verification: ${output.web_url}`,
       }),
     );
-
-    // Ignore verification run for prereleases
-    if (prerelease) {
-      setStatus(context, {
-        state: 'success',
-        description: 'Verification run for prerelease not required.',
-      });
-    } else {
-      setStatus(context, {
-        state: 'pending',
-        description: 'Waiting for verification run to finish.',
-      });
-    }
   }
 };
 
