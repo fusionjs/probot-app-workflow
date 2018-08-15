@@ -90,7 +90,7 @@ module.exports = robot => {
           headers: {
             Authorization: `Bearer ${process.env.BUILDKITE_TOKEN}`,
           },
-        },
+        }
       );
       output = await res.json();
     } catch (err) {
@@ -101,7 +101,7 @@ module.exports = robot => {
     github.issues.createComment(
       context.issue({
         body: `Triggered Fusion.js build verification: ${output.web_url}`,
-      }),
+      })
     );
   }
 };
@@ -120,6 +120,6 @@ async function setStatus(context, {state, description}) {
       description,
       sha: context.payload.pull_request.head.sha,
       context: 'probot/release-verification',
-    }),
+    })
   );
 }

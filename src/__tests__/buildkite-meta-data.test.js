@@ -3,13 +3,15 @@ import app from '../release-verification';
 
 import releasePayload from './fixtures/release-payload.json';
 
-jest.mock('child_process', () => {
-  return {
-    exec: jest.fn(),
-  };
+jest.mock('node-fetch', () => {
+  return jest.fn(() =>
+    Promise.resolve({
+      json: () => Promise.resolve({web_url: 'fusion-verification-url'}),
+    })
+  );
 });
 
-const mockedExec = require('child_process').exec;
+const mockedFetch = require('node-fetch');
 
 describe('buildkite meta-data', () => {
   let robot;
@@ -35,9 +37,7 @@ describe('buildkite meta-data', () => {
       event: 'pull_request',
       payload: releasePayload,
     });
-    const jsonData = JSON.parse(
-      mockedExec.mock.calls[0][0].match(/\-d\ \'([^']*)'/)[1]
-    );
+    const jsonData = mockedFetch.mock.calls[0][1].body;
     expect(jsonData).toMatchSnapshot();
   });
 });
