@@ -4,7 +4,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const exec = require('child_process').exec;
+const fetch = require('node-fetch');
 const parseTitle = require('probot-app-label-release-pr/parse-title.js');
 
 module.exports = robot => {
@@ -49,7 +49,7 @@ module.exports = robot => {
     }
 
     const prerelease = isPrerelease(pr.title);
-    const curlObject = {
+    const payload = {
       commit: 'HEAD',
       branch: 'master',
       message: `${pr.base.repo.name}, ${pr.title} - release verification`,
@@ -64,22 +64,31 @@ module.exports = robot => {
         'release-pr-prerelease': String(prerelease),
       },
     };
-    const curlCommand = `curl \
-    -H "Authorization: Bearer ${process.env.BUILDKITE_TOKEN}" \
-    -X POST "https://api.buildkite.com/v2/organizations/uberopensource/pipelines/fusion-release-verification/builds" \
-      -d '${JSON.stringify(curlObject)}'`;
-    exec(curlCommand, (error, stdout) => {
-      if (error !== null) {
-        // eslint-disable-next-line no-console
-        console.warn('exec error: ' + error);
-      }
-      const output = JSON.parse(stdout);
-      github.issues.createComment(
-        context.issue({
-          body: `Triggered Fusion.js build verification: ${output.web_url}`,
-        })
+
+    let output;
+
+    try {
+      const res = await fetch(
+        'https://api.buildkite.com/v2/organizations/uberopensource/pipelines/fusion-release-verification/builds',
+        {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: {
+            Authorization: `Bearer ${process.env.BUILDKITE_TOKEN}`,
+          },
+        },
       );
-    });
+      output = await res.json();
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.warn(err);
+    }
+
+    github.issues.createComment(
+      context.issue({
+        body: `Triggered Fusion.js build verification: ${output.web_url}`,
+      }),
+    );
 
     // Ignore verification run for prereleases
     if (prerelease) {
@@ -110,6 +119,6 @@ async function setStatus(context, {state, description}) {
       description,
       sha: context.payload.pull_request.head.sha,
       context: 'probot/release-verification',
-    })
+    }),
   );
 }
