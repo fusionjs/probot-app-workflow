@@ -6,12 +6,11 @@ import nonReleaseOpenedPayload from './fixtures/non-release-opened-payload.json'
 import prereleasePayload from './fixtures/prerelease-payload.json';
 import releasePayload from './fixtures/release-payload.json';
 
-jest.mock('child_process', () => {
-  return {
-    exec: (command, callback) => {
-      callback(null, '{"web_url": "fusion-verification-url"}');
-    },
-  };
+jest.mock('node-fetch', () => {
+  return () =>
+    Promise.resolve({
+      json: () => Promise.resolve({web_url: 'fusion-verification-url'}),
+    });
 });
 
 describe('release-verification', () => {
