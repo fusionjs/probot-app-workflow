@@ -4223,9 +4223,9 @@ probot-app-migrations@1.0.5:
   dependencies:
     probot "^3.0.0"
 
-probot-app-pr-label@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/probot-app-pr-label/-/probot-app-pr-label-1.0.1.tgz#b86d0370f8762dc8242dcde6976113e8b7ad6f1f"
+probot-app-pr-label@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/probot-app-pr-label/-/probot-app-pr-label-1.1.0.tgz#93de5458f8cfacd78bace8cf0105f7dea92015bd"
   dependencies:
     probot "^7.0.1"
     semver "5.5.0"
