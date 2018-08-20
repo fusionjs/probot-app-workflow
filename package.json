@@ -1,5 +1,5 @@
 {
-  "name": "probot-app-workflow",
+  "name": "baseui-probot-app-workflow",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -36,8 +36,7 @@
       "probot-app-release-notes",
       "probot-app-release-pr-compare",
       "probot-app-todos",
-      "probot-app-pr-label",
-      "./src/release-verification.js"
+      "probot-app-pr-label"
     ]
   },
   "engines": {
