@@ -4186,11 +4186,12 @@ private@^0.1.6, private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
 
-probot-app-deploy@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/probot-app-deploy/-/probot-app-deploy-1.0.3.tgz#7b2190ece4afde96a577c88307f8359fa17839ab"
+probot-app-deploy@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/probot-app-deploy/-/probot-app-deploy-1.1.0.tgz#8aadd5cc054b14d6621cebea1a2927157dcc6611"
   dependencies:
-    probot "^3.0.0"
+    node-fetch "^2.2.0"
+    probot "7.0.1"
 
 probot-app-label-docs-pr@1.0.2:
   version "1.0.2"

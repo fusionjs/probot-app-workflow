@@ -10,7 +10,7 @@
   "dependencies": {
     "node-fetch": "^2.2.0",
     "probot": "7.0.1",
-    "probot-app-deploy": "1.0.3",
+    "probot-app-deploy": "^1.1.0",
     "probot-app-label-docs-pr": "1.0.2",
     "probot-app-label-release-pr": "1.0.4",
     "probot-app-license": "1.0.2",
