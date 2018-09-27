@@ -4372,9 +4372,9 @@ probot@7.0.1, probot@^7.0.1:
     semver "^5.5.0"
     uuid "^3.2.1"
 
-probot@7.1.2:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/probot/-/probot-7.1.2.tgz#0326524dc56b40b812e763bb5a33d98ae722d319"
+probot@7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/probot/-/probot-7.2.0.tgz#2c9f3904032a208df802dc868aa2198dbf8a5216"
   dependencies:
     "@octokit/rest" "^15.11.0"
     "@octokit/webhooks" "^5.0.2"
@@ -4393,9 +4393,11 @@ probot@7.1.2:
     jsonwebtoken "^8.1.0"
     pkg-conf "^2.0.0"
     promise-events "^0.1.3"
+    qs "^6.5.2"
     raven "^2.4.2"
     resolve "^1.4.0"
     semver "^5.5.0"
+    update-dotenv "^1.1.0"
     uuid "^3.2.1"
 
 probot@^3.0.0:
@@ -4492,6 +4494,10 @@ punycode@^2.1.0:
 qs@6.5.1, qs@^6.5.1, qs@~6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
+
+qs@^6.5.2:
+  version "6.5.2"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
 qs@~6.4.0:
   version "6.4.0"
@@ -5365,6 +5371,10 @@ unset-value@^1.0.0:
   dependencies:
     has-value "^0.3.1"
     isobject "^3.0.0"
+
+update-dotenv@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/update-dotenv/-/update-dotenv-1.1.0.tgz#1b5cd677ce42148fc8c8ed299e064fefd99ea57b"
 
 urix@^0.1.0:
   version "0.1.0"
