@@ -4220,6 +4220,12 @@ private@^0.1.6, private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
 
+probot-app-delete-merged-branch@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/probot-app-delete-merged-branch/-/probot-app-delete-merged-branch-1.0.1.tgz#04bf75d4be7cd2805ed768b7dc58665d23cfbb1a"
+  dependencies:
+    probot "^7.2.0"
+
 probot-app-deploy@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/probot-app-deploy/-/probot-app-deploy-1.1.0.tgz#8aadd5cc054b14d6621cebea1a2927157dcc6611"
@@ -4372,7 +4378,7 @@ probot@7.0.1, probot@^7.0.1:
     semver "^5.5.0"
     uuid "^3.2.1"
 
-probot@7.2.0:
+probot@7.2.0, probot@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/probot/-/probot-7.2.0.tgz#2c9f3904032a208df802dc868aa2198dbf8a5216"
   dependencies:

@@ -10,6 +10,7 @@
   "dependencies": {
     "node-fetch": "^2.2.0",
     "probot": "7.2.0",
+    "probot-app-delete-merged-branch": "^1.0.1",
     "probot-app-deploy": "^1.1.0",
     "probot-app-label-docs-pr": "1.0.2",
     "probot-app-label-release-pr": "1.0.4",
@@ -25,6 +26,7 @@
   },
   "probot": {
     "apps": [
+      "probot-app-delete-merged-branch",
       "probot-app-deploy",
       "probot-app-label-docs-pr",
       "probot-app-label-release-pr",
