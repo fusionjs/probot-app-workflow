@@ -23,9 +23,9 @@
     node-fetch "^2.1.1"
     url-template "^2.0.8"
 
-"@octokit/rest@^15.13.1":
-  version "15.13.1"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-15.13.1.tgz#68b12ff0e470ad70c90e99bbb69f16bcdf62edb4"
+"@octokit/rest@^15.18.0":
+  version "15.18.0"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-15.18.0.tgz#e6de702b57dec94c71e806f1cff0ecb9725b3054"
   dependencies:
     before-after-hook "^1.1.0"
     btoa-lite "^1.0.0"
@@ -2262,6 +2262,10 @@ is-base64@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/is-base64/-/is-base64-0.0.5.tgz#39ecd12e937c667edd3b17fa677036825483b477"
 
+is-base64@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/is-base64/-/is-base64-0.1.0.tgz#a6f20610c6ef4863a51cba32bc0222544b932622"
+
 is-buffer@^1.1.5, is-buffer@~1.1.1:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
@@ -4419,11 +4423,11 @@ probot@7.0.1, probot@^7.0.1:
     semver "^5.5.0"
     uuid "^3.2.1"
 
-probot@7.3.1:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/probot/-/probot-7.3.1.tgz#c18da943eb143d58857bbfc7842f98ef5b4585d4"
+probot@7.4.0:
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/probot/-/probot-7.4.0.tgz#96a70148e8a114bcba75fd1a261155a559916cc5"
   dependencies:
-    "@octokit/rest" "^15.13.1"
+    "@octokit/rest" "^15.18.0"
     "@octokit/webhooks" "^5.0.2"
     "@types/supports-color" "^5.3.0"
     bottleneck "^2.8.0"
@@ -4436,7 +4440,7 @@ probot@7.3.1:
     express "^4.16.2"
     express-async-errors "^3.0.0"
     hbs "^4.0.1"
-    is-base64 "0.0.5"
+    is-base64 "0.1.0"
     js-yaml "^3.9.1"
     jsonwebtoken "^8.1.0"
     pkg-conf "^2.0.0"
