@@ -40,13 +40,6 @@ module.exports = robot => {
       description: 'Checking whether to start a verification build.',
     });
 
-    // if (!isRelease) {
-    //   return setStatus(context, {
-    //     state: 'success',
-    //     description: 'Verification run is not required.',
-    //   });
-    // }
-
     const isRelease = context.payload.label.name === 'release';
     const isPrerelease = isPrerelease(pr.title);
     // Ignore verification run for prereleases
