@@ -52,7 +52,8 @@ describe('release-verification', () => {
     // Should immediately set success
     const statusCalls = github.repos.createStatus.mock.calls;
     expect(github.repos.createStatus).toHaveBeenCalled();
-    expect(github.issues.createComment.mock.calls.length).toBe(0);
+    // Comment is still created, as all PRs get a Fusion.js release comment
+    expect(github.issues.createComment.mock.calls.length).toBe(1);
     expect(statusCalls.length).toBe(2);
     expect(statusCalls[0][0].state).toBe('pending');
     expect(statusCalls[1][0].state).toBe('success');
