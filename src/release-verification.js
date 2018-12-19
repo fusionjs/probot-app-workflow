@@ -68,7 +68,7 @@ module.exports = robot => {
         'release-pr-head-repo-full-name': pr.head.repo.full_name,
         'release-pr-base-repo-full-name': pr.base.repo.full_name,
         'release-pr-prerelease': String(isPrerelease),
-        'release-pr-non-blocking': String(!isRelease || isPrerelease)
+        'is-release-pr': String(isRelease && !isPrerelease)
       },
     };
 
