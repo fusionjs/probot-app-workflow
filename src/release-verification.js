@@ -41,7 +41,7 @@ module.exports = robot => {
     });
 
     const isRelease = context.payload.label.name === 'release';
-    const isPrerelease = isPrerelease(pr.title);
+    const isPrerelease = getIsPrerelease(pr.title);
     // Ignore verification run for prereleases
     if (!isRelease || isPrerelease) {
       setStatus(context, {
@@ -101,7 +101,7 @@ module.exports = robot => {
 
 // PR titles should have a dash in it to be considered a prerelease.
 // E.g., v1.0.0-alpha1
-function isPrerelease(prTitle) {
+function getIsPrerelease(prTitle) {
   return /Release v.*\-.*/.test(prTitle);
 }
 
