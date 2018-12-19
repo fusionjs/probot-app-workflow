@@ -40,21 +40,20 @@ module.exports = robot => {
       description: 'Checking whether to start a verification build.',
     });
 
+    // if (!isRelease) {
+    //   return setStatus(context, {
+    //     state: 'success',
+    //     description: 'Verification run is not required.',
+    //   });
+    // }
+
     const isRelease = context.payload.label.name === 'release';
-    if (!isRelease) {
-      return setStatus(context, {
-        state: 'success',
-        description: 'Verification run is not necessary.',
-      });
-    }
-
-    const prerelease = isPrerelease(pr.title);
-
+    const isPrerelease = isPrerelease(pr.title);
     // Ignore verification run for prereleases
-    if (prerelease) {
+    if (!isRelease || isPrerelease) {
       setStatus(context, {
         state: 'success',
-        description: 'Verification run for prerelease not required.',
+        description: 'Verification run is not required.',
       });
     } else {
       setStatus(context, {
@@ -75,7 +74,8 @@ module.exports = robot => {
         'release-pr-head-sha': pr.head.sha,
         'release-pr-head-repo-full-name': pr.head.repo.full_name,
         'release-pr-base-repo-full-name': pr.base.repo.full_name,
-        'release-pr-prerelease': String(prerelease),
+        'release-pr-prerelease': String(isPrerelease),
+        'release-pr-non-blocking': String(!isRelease || isPrerelease)
       },
     };
 
