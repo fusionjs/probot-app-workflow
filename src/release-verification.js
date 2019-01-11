@@ -41,20 +41,12 @@ module.exports = robot => {
     });
 
     const isRelease = context.payload.label.name === 'release';
-    if (!isRelease) {
-      return setStatus(context, {
-        state: 'success',
-        description: 'Verification run is not necessary.',
-      });
-    }
-
-    const prerelease = isPrerelease(pr.title);
-
+    const isPrerelease = getIsPrerelease(pr.title);
     // Ignore verification run for prereleases
-    if (prerelease) {
+    if (!isRelease || isPrerelease) {
       setStatus(context, {
         state: 'success',
-        description: 'Verification run for prerelease not required.',
+        description: 'Verification run is not required.',
       });
     } else {
       setStatus(context, {
@@ -75,7 +67,8 @@ module.exports = robot => {
         'release-pr-head-sha': pr.head.sha,
         'release-pr-head-repo-full-name': pr.head.repo.full_name,
         'release-pr-base-repo-full-name': pr.base.repo.full_name,
-        'release-pr-prerelease': String(prerelease),
+        'release-pr-prerelease': String(isPrerelease),
+        'is-release-pr': String(isRelease && !isPrerelease)
       },
     };
 
@@ -108,7 +101,7 @@ module.exports = robot => {
 
 // PR titles should have a dash in it to be considered a prerelease.
 // E.g., v1.0.0-alpha1
-function isPrerelease(prTitle) {
+function getIsPrerelease(prTitle) {
   return /Release v.*\-.*/.test(prTitle);
 }
 
