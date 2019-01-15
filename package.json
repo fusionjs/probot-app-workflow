@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.2.0",
-    "probot": "7.4.0",
+    "probot": "7.5.0",
     "probot-app-delete-merged-branch": "^1.0.1",
     "probot-app-deploy": "^1.1.0",
     "probot-app-label-docs-pr": "1.0.2",
