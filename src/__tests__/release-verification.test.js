@@ -5,6 +5,8 @@ import nonReleasePayload from './fixtures/non-release-payload.json';
 import nonReleaseOpenedPayload from './fixtures/non-release-opened-payload.json';
 import prereleasePayload from './fixtures/prerelease-payload.json';
 import releasePayload from './fixtures/release-payload.json';
+import nonReleaseClosedPayload from './fixtures/non-release-closed-payload.json';
+import releaseClosedPayload from './fixtures/release-closed-payload.json';
 
 jest.mock('node-fetch', () => {
   return () =>
@@ -52,8 +54,7 @@ describe('release-verification', () => {
     // Should immediately set success
     const statusCalls = github.repos.createStatus.mock.calls;
     expect(github.repos.createStatus).toHaveBeenCalled();
-    // Comment is still created, as all PRs get a Fusion.js release comment
-    expect(github.issues.createComment.mock.calls.length).toBe(1);
+    expect(github.issues.createComment.mock.calls.length).toBe(0);
     expect(statusCalls.length).toBe(2);
     expect(statusCalls[0][0].state).toBe('pending');
     expect(statusCalls[1][0].state).toBe('success');
@@ -89,5 +90,28 @@ describe('release-verification', () => {
     expect(statusCalls.length).toBe(2);
     expect(statusCalls[0][0].state).toBe('pending');
     expect(statusCalls[1][0].state).toBe('pending');
+  });
+
+  it('on PR close for non-release: triggers buildkite', async () => {
+    await robot.receive({
+      event: 'pull_request',
+      payload: nonReleaseClosedPayload,
+    });
+    expect(github.issues.createComment.mock.calls.length).toBe(1);
+    expect(github.issues.createComment.mock.calls[0][0].body).toContain(
+      'fusion-verification-url'
+    );
+    const statusCalls = github.repos.createStatus.mock.calls;
+    expect(statusCalls.length).toBe(0);
+  });
+
+  it('on PR close for release: no-op', async () => {
+    await robot.receive({
+      event: 'pull_request',
+      payload: releaseClosedPayload,
+    });
+    expect(github.issues.createComment.mock.calls.length).toBe(0);
+    const statusCalls = github.repos.createStatus.mock.calls;
+    expect(statusCalls.length).toBe(0);
   });
 });
