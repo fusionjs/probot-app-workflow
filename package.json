@@ -43,7 +43,7 @@
     ]
   },
   "engines": {
-    "node": "^8.9.0"
+    "node": "^10.15.0"
   },
   "devDependencies": {
     "babel-jest": "^23.2.0",
