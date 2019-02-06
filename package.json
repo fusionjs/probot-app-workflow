@@ -39,7 +39,8 @@
       "probot-app-release-pr-compare",
       "probot-app-todos",
       "probot-app-pr-label",
-      "./src/release-verification.js"
+      "./src/release-verification.js",
+      "./src/auto-approve-and-land-prereleases.js"
     ]
   },
   "engines": {
