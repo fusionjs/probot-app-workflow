@@ -10,7 +10,20 @@ module.exports = robot => {
   robot.on('pull_request.edited', handleApproval);
   robot.on('pull_request.synchronize', handleApproval);
   robot.on('pull_request.labeled', handleApproval);
-
+  robot.on('status', handleSkipBuildCheck);
+  
+  async function handleSkipBuildCheck(context) {
+    const {github, payload} = context;
+    
+    const buildCheck = `buildkite/${payload.repository.name}`;
+    if(payload.context === buildCheck && payload.state !== 'success') {
+      await setStatus(context, {
+        state: 'success',
+        description: 'Build not required for pre-releases.',
+      });
+    }
+  }
+  
   /**
    * Approves and lands pull requests that match:
    *    - Is a pre-release
@@ -24,6 +37,9 @@ module.exports = robot => {
     const isMemberOfFusionOrg = await getIsMemberOfOrg(github, 'fusionjs', pr.user.login);
     if(!(isPrerelease && isMemberOfFusionOrg)) return;
 
+    // Wait for any quick-running statuses to complete
+    await delay(3 * 1000);
+
     // Approve the pull request
     github.pullRequests.createReview(
       context.issue({
@@ -31,7 +47,7 @@ module.exports = robot => {
       })
     );
 
-    // Attempt to merge the pull request
+    // Attempt to merge the pull request, if possible
     github.pullRequests.merge(context.issue());
   }
 };
@@ -65,4 +81,28 @@ async function getIsMemberOfOrg(github, org, username) {
   } catch (e) {
     return false;
   }
+}
+
+/*
+ * Asynchronously delays for the desired time, in milliseconds.
+ */
+async function delay(ms) {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(), ms);
+  });
+}
+
+/*
+ * Sets the status for the given commit to the provided state w/ description.
+ */
+async function setStatus(context, {state, description}) {
+  const {github} = context;
+  return github.repos.createStatus(
+    context.issue({
+      state,
+      description,
+      sha: context.payload.commit.sha,
+      context: context.payload.context,
+    })
+  );
 }
