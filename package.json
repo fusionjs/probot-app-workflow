@@ -43,9 +43,6 @@
       "./src/auto-approve-and-land-prereleases.js"
     ]
   },
-  "engines": {
-    "node": "^10.15.0"
-  },
   "devDependencies": {
     "babel-jest": "^23.2.0",
     "babel-preset-env": "^1.7.0",
