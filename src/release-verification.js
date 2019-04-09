@@ -7,6 +7,10 @@
 const fetch = require('node-fetch');
 const parseTitle = require('probot-app-label-release-pr/parse-title.js');
 
+const ORG_WHITELIST = (whitelist =>
+  whitelist ? whitelist.split(',') : []
+)(process.env.RELEASE_VERIFICATION_ORG_WHITELIST);
+
 module.exports = robot => {
   robot.on('pull_request.opened', nonReleaseStatus);
   robot.on('pull_request.reopened', nonReleaseStatus);
@@ -20,6 +24,10 @@ module.exports = robot => {
    * We auto-pass the status so we can block on this status across repos.
    */
   async function nonReleaseStatus(context) {
+    if (!getIsWhitelisted(context.payload)) {
+      return;
+    }
+
     const {github} = context;
     const pr = context.payload.pull_request;
     const isRelease = parseTitle(pr.title);
@@ -32,6 +40,10 @@ module.exports = robot => {
   }
 
   async function handleClosedPR(context) {
+    if (!getIsWhitelisted(context.payload)) {
+      return;
+    }
+
     const {github} = context;
     const pr = context.payload.pull_request;
 
@@ -65,6 +77,10 @@ module.exports = robot => {
   }
 
   async function checkReleaseLabel(context) {
+    if (!getIsWhitelisted(context.payload)) {
+      return;
+    }
+
     const {github} = context;
     const pr = context.payload.pull_request;
 
@@ -118,6 +134,10 @@ module.exports = robot => {
     return triggerBuildVerification(context, payload);
   }
 };
+
+function getIsWhitelisted(payload) {
+  return !ORG_WHITELIST.length || ORG_WHITELIST.includes(payload.repository.owner.login);
+}
 
 // PR titles should have a dash in it to be considered a prerelease.
 // E.g., v1.0.0-alpha1
