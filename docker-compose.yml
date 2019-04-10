@@ -7,6 +7,7 @@ services:
       - /probot-app-workflow/node_modules/
     environment:
       - NOW_TOKEN
+      - NOW_MONOREPO_TOKEN
       - GH_TOKEN
       - BUILDKITE
       - BUILDKITE_REPO
