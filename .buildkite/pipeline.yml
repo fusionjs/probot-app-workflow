@@ -20,7 +20,7 @@ steps:
     command: "scripts/deploy.sh"
     concurrency: 1
     concurrency_group: "deploy"
-    branches: master
+    branches: fusion-monorepo-bot
     plugins:
       docker-compose#v2.6.0:
         run: probot-app-workflow
