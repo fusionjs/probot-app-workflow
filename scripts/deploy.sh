@@ -2,8 +2,17 @@
 
 set -e
 
+orgs=(`echo $ORG_LIST`)
+team=$NOW_TEAM
+token=$NOW_TOKEN
+
 yarn global add now@11.0.6
-APP_URL=$(now --npm -t $NOW_TOKEN --public -e PRIVATE_KEY=@private-key -e APP_ID=@app-id -e BUILDKITE_TOKEN=@buildkite-token -e WEBHOOK_SECRET=@webhook-secret -e NODE_ENV="production")
-now scale $APP_URL sfo 1 --token=$NOW_TOKEN
-now alias set $APP_URL fusion-probot -t $NOW_TOKEN
-now rm probot-app-workflow --safe -t $NOW_TOKEN -y
+# we use private github apps for this bot, which can't be installed on
+# multiple orgs, so we need a separate deployment for each org
+for org in "${orgs[@]}"; do
+  app_name="$org-bot"
+  app_url=$(now --npm --name=$app_name -T $team -t $token --public -e PRIVATE_KEY="@probot-$org-private-key" -e APP_ID="@probot-$org-app-id" -e WEBHOOK_SECRET="@probot-$org-webhook-secret" -e BUILDKITE_TOKEN=@buildkite-token -e NODE_ENV="production")
+  now scale $app_url sfo 1 -T $team --token=$token
+  now alias set $app_url $app_name -T $team -t $token
+  now rm $app_name --safe -T $team -t $token -y || true
+done
