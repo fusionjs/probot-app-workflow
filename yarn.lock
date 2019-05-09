@@ -4664,10 +4664,10 @@ probot-app-migrations@1.0.5:
   dependencies:
     probot "^3.0.0"
 
-probot-app-monorepo-sync@^0.0.1-0:
-  version "0.0.1-0"
-  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-0.0.1-0.tgz#345d2143e00ef1dfa12e15ad8591830525a95e89"
-  integrity sha512-wuTqFYB9myT+M6WhCKSrob4jRhdJrv3ashd7vMKL5pA9hfKmIQ2Ly8fzxGNj/QAURwgxZqqOAxmkOwfwm6BX+g==
+probot-app-monorepo-sync@^0.0.1-1:
+  version "0.0.1-1"
+  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-0.0.1-1.tgz#614c698f4ea4e4a8c4170fde8a8dcbd99b9a753c"
+  integrity sha512-7xEhKcGef3BDVeSClndwQIbo85XdpUJQBKK4aMZhaI1iJ9SuFNa6J+/EgtILEEeK0kAyMjiGyGGk17m4tX7Y+Q==
   dependencies:
     just-index "^2.1.0"
     just-pick "^2.1.0"
