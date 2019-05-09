@@ -2,11 +2,17 @@
 
 set -e
 
+orgs=(`echo $ORG_LIST`)
 team=$NOW_TEAM
-token=$NOW_MONOREPO_TOKEN
+token=$NOW_TOKEN
 
 yarn global add now@11.0.6
-APP_URL=$(now --npm --name=fusion-monorepo-bot -T $team -t $token --public -e PRIVATE_KEY=@github-app-private-key -e APP_ID=@github-app-id -e BUILDKITE_TOKEN=@buildkite-token -e WEBHOOK_SECRET=@github-app-webhook-secret -e NODE_ENV="production")
-now scale $APP_URL sfo 1 -T $team --token=$token
-now alias set $APP_URL fusion-monorepo-bot -T $team -t $token
-now rm fusion-monorepo-bot --safe -T $team -t $token -y
+# we use private github apps for this bot, which can't be installed on
+# multiple orgs, so we need a separate deployment for each org
+for org in "${orgs[@]}"; do
+  app_name="$org-bot"
+  app_url=$(now --npm --name=$app_name -T $team -t $token --public -e PRIVATE_KEY="@probot-$org-private-key" -e APP_ID="@probot-$org-app-id" -e WEBHOOK_SECRET="@probot-$org-webhook-secret" -e BUILDKITE_TOKEN=@buildkite-token -e NODE_ENV="production")
+  now scale $app_url sfo 1 -T $team --token=$token
+  now alias set $app_url $app_name -T $team -t $token
+  now rm $app_name --safe -T $team -t $token -y || true
+done
