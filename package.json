@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "probot run",
-    "test": "jest",
+    "test": "echo 'no tests to run'",
     "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) npm start"
   },
   "dependencies": {
@@ -17,11 +17,8 @@
     "probot-app-license": "1.0.2",
     "probot-app-merge-pr": "1.1.1",
     "probot-app-migrations": "1.0.5",
-    "probot-app-pr-label": "1.3.0",
+    "probot-app-monorepo-sync": "^0.0.1-0",
     "probot-app-pr-title": "^1.1.5",
-    "probot-app-release": "1.0.4",
-    "probot-app-release-notes": "1.0.6",
-    "probot-app-release-pr-compare": "1.0.1",
     "probot-app-todos": "1.0.5"
   },
   "probot": {
@@ -33,14 +30,9 @@
       "probot-app-license",
       "probot-app-merge-pr",
       "probot-app-migrations",
+      "probot-app-monorepo-sync",
       "probot-app-pr-title",
-      "probot-app-release",
-      "probot-app-release-notes",
-      "probot-app-release-pr-compare",
-      "probot-app-todos",
-      "probot-app-pr-label",
-      "./src/release-verification.js",
-      "./src/auto-approve-and-land-prereleases.js"
+      "probot-app-todos"
     ]
   },
   "devDependencies": {

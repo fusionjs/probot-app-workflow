@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`buildkite meta-data populates meta-data with branch information 1`] = `"{\\"commit\\":\\"HEAD\\",\\"branch\\":\\"master\\",\\"message\\":\\"probot-playground, Release v1.0.7 - release verification\\",\\"author\\":{\\"name\\":\\"KevinGrandon\\"},\\"meta_data\\":{\\"release-pr-number\\":\\"6\\",\\"release-pr-head-sha\\":\\"23999b445a8daf81238dbcdc08776f4489f4aa98\\",\\"release-pr-head-repo-full-name\\":\\"KevinGrandon/probot-playground\\",\\"release-pr-base-repo-full-name\\":\\"KevinGrandon/probot-playground\\",\\"release-pr-prerelease\\":\\"false\\",\\"is-release-pr\\":\\"true\\"}}"`;
