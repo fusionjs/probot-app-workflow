@@ -6,15 +6,15 @@ steps:
         image-repository: 027047743804.dkr.ecr.us-east-2.amazonaws.com/uber
     agents:
       queue: builders
-  - wait
-  - name: ":jest:"
-    command: "yarn test"
-    concurrency_group: "deploy"
-    plugins:
-      docker-compose#v2.6.0:
-        run: probot-app-workflow
-    agents:
-      queue: workers
+  # - wait
+  # - name: ":jest:"
+  #   command: "yarn test"
+  #   concurrency_group: "deploy"
+  #   plugins:
+  #     docker-compose#v2.6.0:
+  #       run: probot-app-workflow
+  #   agents:
+  #     queue: workers
   - wait
   - name: ":rocket:"
     command: "scripts/deploy.sh"
