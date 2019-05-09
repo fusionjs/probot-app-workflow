@@ -32,8 +32,7 @@
       "probot-app-migrations",
       "probot-app-monorepo-sync",
       "probot-app-pr-title",
-      "probot-app-todos",
-      "./src/auto-approve-and-land-prereleases.js"
+      "probot-app-todos"
     ]
   },
   "devDependencies": {
