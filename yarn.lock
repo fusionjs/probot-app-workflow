@@ -48,7 +48,7 @@
     universal-user-agent "^2.0.1"
     url-template "^2.0.8"
 
-"@octokit/graphql@2.1.1":
+"@octokit/graphql@2.1.1", "@octokit/graphql@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@octokit/graphql/-/graphql-2.1.1.tgz#29e5fb26d1af4a365898641fceff7b3fd929f08b"
   integrity sha512-BVRBRFulb2H42u/Slt+x59tFw7lRf94xX9/Dv++mYDmYRXaY6LIOzrCTY2GYOVQVcoBjPhfEiYAMuJUCPNoe2g==
@@ -75,18 +75,6 @@
   dependencies:
     bottleneck "^2.15.3"
 
-"@octokit/request@3.0.0", "@octokit/request@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@octokit/request/-/request-3.0.0.tgz#304a279036b2dc89e7fba7cb30c9e6a9b1f4d2df"
-  integrity sha512-DZqmbm66tq+a9FtcKrn0sjrUpi0UaZ9QPUCxxyk/4CJ2rseTMpAWRf6gCwOSUCzZcx/4XVIsDk+kz5BVdaeenA==
-  dependencies:
-    "@octokit/endpoint" "^4.0.0"
-    deprecation "^1.0.1"
-    is-plain-object "^2.0.4"
-    node-fetch "^2.3.0"
-    once "^1.4.0"
-    universal-user-agent "^2.0.1"
-
 "@octokit/request@3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@octokit/request/-/request-3.0.3.tgz#ace63b5ea196cc00ad27f3fbe5c13a9698681ec8"
@@ -99,25 +87,19 @@
     once "^1.4.0"
     universal-user-agent "^2.0.1"
 
-"@octokit/rest@^16.23.2":
-  version "16.23.4"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.23.4.tgz#4d8bcb1cc0cf6eeb8865632d4d60d79fc3425bbf"
-  integrity sha512-fQuYQ0vgNLkzeN0KEsqN0aS6EPzcuaePT5M5cE5qnKayaxFwRIQOMhNR/rTmEqo/zDK/20ZAcHsgLKodSsJtww==
+"@octokit/request@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@octokit/request/-/request-3.0.0.tgz#304a279036b2dc89e7fba7cb30c9e6a9b1f4d2df"
+  integrity sha512-DZqmbm66tq+a9FtcKrn0sjrUpi0UaZ9QPUCxxyk/4CJ2rseTMpAWRf6gCwOSUCzZcx/4XVIsDk+kz5BVdaeenA==
   dependencies:
-    "@octokit/request" "3.0.0"
-    atob-lite "^2.0.0"
-    before-after-hook "^1.4.0"
-    btoa-lite "^1.0.0"
+    "@octokit/endpoint" "^4.0.0"
     deprecation "^1.0.1"
-    lodash.get "^4.4.2"
-    lodash.set "^4.3.2"
-    lodash.uniq "^4.5.0"
-    octokit-pagination-methods "^1.1.0"
+    is-plain-object "^2.0.4"
+    node-fetch "^2.3.0"
     once "^1.4.0"
-    universal-user-agent "^2.0.0"
-    url-template "^2.0.8"
+    universal-user-agent "^2.0.1"
 
-"@octokit/rest@^16.25.0":
+"@octokit/rest@^16.25.0", "@octokit/rest@^16.25.4":
   version "16.25.4"
   resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.25.4.tgz#4bc47c08e46ea522e79f4798605f11fa9aa8520d"
   integrity sha512-62G8sb5PmIDhnu6K4W39If0BdA+P6VLuY83nMjjHyQiXH1QbjiKKeEv9uwRHe7XTcyZbVNG9M5zt5uxOpMW8CQ==
@@ -1515,11 +1497,6 @@ domexception@^1.0.1:
   integrity sha512-raigMkn7CJNNo6Ihro1fzG7wr3fHuYVytzquZKX5n0yizGsTcYgzdIUwj1X9pK0VvjeihV+XiclP+DjwbsSKug==
   dependencies:
     webidl-conversions "^4.0.2"
-
-dotenv@~7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-7.0.0.tgz#a2be3cd52736673206e8a85fb5210eea29628e7c"
-  integrity sha512-M3NhsLbV1i6HuGzBUH8vXrtxOk+tWmzWKDMbAVSUp3Zsjm7ywFeuwrUXhmhQyRK1q5B5GGy7hcXPbj3bnfZg2g==
 
 dotenv@~8.0.0:
   version "8.0.0"
@@ -2974,7 +2951,7 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.13.1, js-yaml@^3.7.0, js-yaml@^3.9.1:
+js-yaml@^3.13.1, js-yaml@^3.7.0:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
@@ -4078,16 +4055,18 @@ probot-app-migrations@^1.0.6-0:
   dependencies:
     probot "^9.2.10"
 
-probot-app-monorepo-sync@^0.0.1-1:
-  version "0.0.1-1"
-  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-0.0.1-1.tgz#614c698f4ea4e4a8c4170fde8a8dcbd99b9a753c"
-  integrity sha512-7xEhKcGef3BDVeSClndwQIbo85XdpUJQBKK4aMZhaI1iJ9SuFNa6J+/EgtILEEeK0kAyMjiGyGGk17m4tX7Y+Q==
+probot-app-monorepo-sync@^0.0.1-2:
+  version "0.0.1-2"
+  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-0.0.1-2.tgz#75201619b7768de42cad9fe8ea8367cee5affba1"
+  integrity sha512-xYc2WDo2IeTvJ3Uz0odzlDg3mtUHk0X0iik4g1mDj03GtFDPFJtdBcIblYqWVN8hLCn+piIt80nBvLLq6TxysQ==
   dependencies:
+    "@octokit/graphql" "^2.1.1"
+    "@octokit/rest" "^16.25.4"
     just-index "^2.1.0"
     just-pick "^2.1.0"
     just-safe-get "^1.3.0"
     p-queue "^4.0.0"
-    probot "^9.1.1"
+    probot "^9.2.10"
 
 probot-app-pr-title@^1.1.8-0:
   version "1.1.8-0"
@@ -4103,45 +4082,6 @@ probot-app-todos@^1.0.6-0:
   integrity sha512-jWw/owrhZ/1TpGPtUF8kBYo0E3eYD/EKYXnhTfJOJM39AkxS2lWHEJZowpjl9fBlaE0hjID7lTgQ92oFh93QPQ==
   dependencies:
     probot "^9.2.10"
-
-probot@^9.1.1:
-  version "9.2.4"
-  resolved "https://registry.yarnpkg.com/probot/-/probot-9.2.4.tgz#f3924138c11444700172cf3ab6999c1d289d35d6"
-  integrity sha512-Rtmsyx4dNjdvXQFt/8KUxYGfiDbPVOKj0H9WJzOTm+r2fkptioiJ6L4eejkbWc10K3NIYNMMh/3cmoAipnWq9w==
-  dependencies:
-    "@octokit/app" "^2.2.4"
-    "@octokit/graphql" "2.1.1"
-    "@octokit/plugin-enterprise-compatibility" "^1.0.0"
-    "@octokit/plugin-retry" "^2.1.1"
-    "@octokit/plugin-throttling" "^2.3.0"
-    "@octokit/rest" "^16.23.2"
-    "@octokit/webhooks" "^6.0.0"
-    "@types/supports-color" "^5.3.0"
-    bottleneck "^2.15.3"
-    bunyan "^1.8.12"
-    bunyan-format "^0.2.1"
-    bunyan-sentry-stream "^1.1.0"
-    cache-manager "^2.4.0"
-    commander "^2.19.0"
-    dotenv "~7.0.0"
-    eventsource "^1.0.7"
-    express "^4.16.2"
-    express-async-errors "^3.0.0"
-    hbs "^4.0.3"
-    ioredis "^4.5.1"
-    is-base64 "0.1.0"
-    js-yaml "^3.9.1"
-    jsonwebtoken "^8.1.0"
-    octokit-pagination-methods "1.1.0"
-    pkg-conf "^3.0.0"
-    promise-events "^0.1.3"
-    qs "^6.5.2"
-    raven "^2.4.2"
-    resolve "^1.4.0"
-    semver "^6.0.0"
-    supports-color "^6.0.0"
-    update-dotenv "^1.1.0"
-    uuid "^3.2.1"
 
 probot@^9.2.10:
   version "9.2.10"
