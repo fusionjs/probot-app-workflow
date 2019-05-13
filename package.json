@@ -12,7 +12,7 @@
     "probot": "^9.2.10",
     "probot-app-delete-merged-branch": "^1.0.2-0",
     "probot-app-deploy": "^1.1.1-0",
-    "probot-app-label-docs-pr": "^1.1.1-0",
+    "probot-app-label-docs-pr": "^1.1.1-1",
     "probot-app-merge-pr": "^1.1.2-0",
     "probot-app-migrations": "^1.0.6-0",
     "probot-app-monorepo-sync": "^0.0.1-2",

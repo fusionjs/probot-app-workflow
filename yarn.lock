@@ -4034,10 +4034,10 @@ probot-app-deploy@^1.1.1-0:
     node-fetch "^2.2.0"
     probot "^9.2.10"
 
-probot-app-label-docs-pr@^1.1.1-0:
-  version "1.1.1-0"
-  resolved "https://registry.yarnpkg.com/probot-app-label-docs-pr/-/probot-app-label-docs-pr-1.1.1-0.tgz#174ac9ad256af0e1bc13b00af049ca5cd6fe8465"
-  integrity sha512-5KUynJ7K3YakzC/luqH4Exufkf1fUusMMdWPwPypiHcHOWnXpOoC6qBM3psXyfjVNVqRfA3NTGsqRzsxQgPHNg==
+probot-app-label-docs-pr@^1.1.1-1:
+  version "1.1.1-1"
+  resolved "https://registry.yarnpkg.com/probot-app-label-docs-pr/-/probot-app-label-docs-pr-1.1.1-1.tgz#aac2782d6edc1f183b069235ded84ee7262d649c"
+  integrity sha512-h0ohIqnZwSXQmkPY/8OFekclEev4gOwpbVIKb85L8FSIs/JERs2L0pZ7AdSsINOv6jnNKpQLTKGkQoI0ZCiILg==
   dependencies:
     probot "^9.2.10"
 
