@@ -14,8 +14,8 @@
     "probot-app-deploy": "^1.1.1-0",
     "probot-app-label-docs-pr": "^1.1.1-1",
     "probot-app-merge-pr": "^1.1.2-0",
-    "probot-app-migrations": "^1.0.6-0",
-    "probot-app-monorepo-sync": "^0.0.1-3",
+    "probot-app-migrations": "^1.0.6-1",
+    "probot-app-monorepo-sync": "^0.0.1-4",
     "probot-app-pr-title": "^1.1.8-1",
     "probot-app-todos": "^1.0.6-0"
   },

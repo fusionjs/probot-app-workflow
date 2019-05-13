@@ -4048,17 +4048,17 @@ probot-app-merge-pr@^1.1.2-0:
   dependencies:
     probot "^9.2.10"
 
-probot-app-migrations@^1.0.6-0:
-  version "1.0.6-0"
-  resolved "https://registry.yarnpkg.com/probot-app-migrations/-/probot-app-migrations-1.0.6-0.tgz#05ab642034afd1c12695264e91787acd58bc1050"
-  integrity sha512-k6QecvkDFTTsGbGgOr92g7jhRIXRZ4wrDI+8PBC5f69lGfmpiq7j8qzTcHRGRlWgyAloL6mC/NZwr8b83kjo7Q==
+probot-app-migrations@^1.0.6-1:
+  version "1.0.6-1"
+  resolved "https://registry.yarnpkg.com/probot-app-migrations/-/probot-app-migrations-1.0.6-1.tgz#026e7493bffaf2cfecd94c03d14a25eae563e3ff"
+  integrity sha512-VNyzaCugv2wEnP8/k9gAXhbnKMcPkt+0BeRugRf2B2ItOElOvMZIjZ7amnemd5OYkhgsmI7l2BkGzXj1av5shw==
   dependencies:
     probot "^9.2.10"
 
-probot-app-monorepo-sync@^0.0.1-3:
-  version "0.0.1-3"
-  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-0.0.1-3.tgz#7ba51f4aee5f38d0324fd478f4070d748af473e4"
-  integrity sha512-olAIOYz0fk5efk3j7Zsphx0JGoD9z/PFQ41Q9FdpZV5yw+bnYYuTsxz4NkBlvjVlDB9GI+rFjW5NoIpMqIbfVQ==
+probot-app-monorepo-sync@^0.0.1-4:
+  version "0.0.1-4"
+  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-0.0.1-4.tgz#4a820e8d2cf393a9df145e19062bf4e04faec4ac"
+  integrity sha512-bjYc4ePKi3iJ+hb6TZDUYkSeJRapCN3ZczNDV+kG4eamkLpXhG4YJBbzyeMU1hA9XtEkqCRdIKacBbLrPYSYoA==
   dependencies:
     "@octokit/graphql" "^2.1.1"
     "@octokit/rest" "^16.25.4"
