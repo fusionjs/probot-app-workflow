@@ -4635,21 +4635,6 @@ probot-app-label-docs-pr@1.1.0:
   dependencies:
     probot "7.5.0"
 
-probot-app-label-release-pr@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/probot-app-label-release-pr/-/probot-app-label-release-pr-1.0.4.tgz#0cf915b85f55c847bf040d86bcdc307163fcc7dd"
-  integrity sha512-tBW97Lv1as3MNQ3L9KXKdCe9a6tOzdRss2Q1X5tuZA2G97F1rpMqrodyBYfNzBnmdrHAUm+WAzU9ZnEZP0FtdQ==
-  dependencies:
-    probot "^3.0.0"
-    semver "^5.4.1"
-
-probot-app-license@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/probot-app-license/-/probot-app-license-1.0.2.tgz#08fb9a01a25dba82f3bd447ce33ace6bd259016a"
-  integrity sha512-GQGj1JmfHT4qeaihhoWNnPPGdCuUrjbop6g2OghTlthjCAPR6DoPM7JzKUQBRvbVg380Qfjb8IRUgaEZHC08wA==
-  dependencies:
-    probot "^3.0.0"
-
 probot-app-merge-pr@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/probot-app-merge-pr/-/probot-app-merge-pr-1.1.1.tgz#cc6a331733c8c30565861b9d965c7a2a564407f3"
