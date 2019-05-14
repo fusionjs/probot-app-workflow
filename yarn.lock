@@ -4055,10 +4055,10 @@ probot-app-migrations@^1.0.6-1:
   dependencies:
     probot "^9.2.10"
 
-probot-app-monorepo-sync@^0.0.1-4:
-  version "0.0.1-4"
-  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-0.0.1-4.tgz#4a820e8d2cf393a9df145e19062bf4e04faec4ac"
-  integrity sha512-bjYc4ePKi3iJ+hb6TZDUYkSeJRapCN3ZczNDV+kG4eamkLpXhG4YJBbzyeMU1hA9XtEkqCRdIKacBbLrPYSYoA==
+probot-app-monorepo-sync@^0.0.1-5:
+  version "0.0.1-5"
+  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-0.0.1-5.tgz#5e06fee23c72af83ff0d825a1bb23f764212f812"
+  integrity sha512-HHwlPCStwh0j8+dS5J8BrZMM24AIAgJIMEEDA2W40b+yD5fxHtymCcA5Ow9MppRFJOB2XSKdQFfDD/yng43ABQ==
   dependencies:
     "@octokit/graphql" "^2.1.1"
     "@octokit/rest" "^16.25.4"
