@@ -16,8 +16,7 @@
     "probot-app-merge-pr": "^1.1.2-0",
     "probot-app-migrations": "^1.0.6-1",
     "probot-app-monorepo-sync": "^0.0.1-5",
-    "probot-app-pr-title": "^1.1.8-1",
-    "probot-app-todos": "^1.0.6-0"
+    "probot-app-pr-title": "^1.1.8-1"
   },
   "probot": {
     "apps": [
@@ -27,8 +26,7 @@
       "probot-app-merge-pr",
       "probot-app-migrations",
       "probot-app-monorepo-sync",
-      "probot-app-pr-title",
-      "probot-app-todos"
+      "probot-app-pr-title"
     ]
   },
   "devDependencies": {

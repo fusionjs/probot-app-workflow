@@ -4076,13 +4076,6 @@ probot-app-pr-title@^1.1.8-1:
     compromise "11.5.3"
     probot "^9.2.10"
 
-probot-app-todos@^1.0.6-0:
-  version "1.0.6-0"
-  resolved "https://registry.yarnpkg.com/probot-app-todos/-/probot-app-todos-1.0.6-0.tgz#62e45bf2e659b97dd804b5bb56ef8c720470761f"
-  integrity sha512-jWw/owrhZ/1TpGPtUF8kBYo0E3eYD/EKYXnhTfJOJM39AkxS2lWHEJZowpjl9fBlaE0hjID7lTgQ92oFh93QPQ==
-  dependencies:
-    probot "^9.2.10"
-
 probot@^9.2.10:
   version "9.2.10"
   resolved "https://registry.yarnpkg.com/probot/-/probot-9.2.10.tgz#1bc7659f13656e190565ba02bd58a86d26ae4f11"
