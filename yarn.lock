@@ -4034,24 +4034,10 @@ probot-app-deploy@^1.1.1-0:
     node-fetch "^2.2.0"
     probot "^9.2.10"
 
-probot-app-label-docs-pr@^1.1.1-1:
-  version "1.1.1-1"
-  resolved "https://registry.yarnpkg.com/probot-app-label-docs-pr/-/probot-app-label-docs-pr-1.1.1-1.tgz#aac2782d6edc1f183b069235ded84ee7262d649c"
-  integrity sha512-h0ohIqnZwSXQmkPY/8OFekclEev4gOwpbVIKb85L8FSIs/JERs2L0pZ7AdSsINOv6jnNKpQLTKGkQoI0ZCiILg==
-  dependencies:
-    probot "^9.2.10"
-
 probot-app-merge-pr@^1.1.2-0:
   version "1.1.2-0"
   resolved "https://registry.yarnpkg.com/probot-app-merge-pr/-/probot-app-merge-pr-1.1.2-0.tgz#ceb2254c08bbbfe58a5913593026b0218d25616e"
   integrity sha512-yzjmy6kya03SyTyMxTI3AN8O2jL28iWC8E9P/7tJ1ZTIrHjm8lsjyrnyeNMTDmNX70p49WMQqKD2z8axozfaEA==
-  dependencies:
-    probot "^9.2.10"
-
-probot-app-migrations@^1.0.6-1:
-  version "1.0.6-1"
-  resolved "https://registry.yarnpkg.com/probot-app-migrations/-/probot-app-migrations-1.0.6-1.tgz#026e7493bffaf2cfecd94c03d14a25eae563e3ff"
-  integrity sha512-VNyzaCugv2wEnP8/k9gAXhbnKMcPkt+0BeRugRf2B2ItOElOvMZIjZ7amnemd5OYkhgsmI7l2BkGzXj1av5shw==
   dependencies:
     probot "^9.2.10"
 
