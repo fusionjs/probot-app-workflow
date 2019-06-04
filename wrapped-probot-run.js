@@ -9,7 +9,9 @@ const express = require('express');
 const get = require('just-safe-get');
 const {Probot} = require('probot');
 
-const WHITELIST = new Set(process.env.REPO_WHITELIST || []);
+const WHITELIST = new Set(
+  (process.env.REPO_WHITELIST || '').split(/, ?/)
+);
 
 // this behaves exactly like the `probot run` command, except it
 // wraps the internal probot server so it can intercept webhooks
