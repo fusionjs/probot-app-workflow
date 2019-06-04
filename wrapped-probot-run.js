@@ -36,6 +36,7 @@ Probot.run(process.argv)
       next();
     });
 
+    // ref: https://github.com/probot/probot/blob/ade14ae/src/index.ts#L208
     probot.httpServer.close();
     server.use(probot.server);
     probot.httpServer = server.listen(probot.options.port);
