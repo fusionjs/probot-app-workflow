@@ -8,10 +8,10 @@ services:
     environment:
       - NOW_TOKEN
       - NOW_TEAM
-      - ORG_LIST
       - GH_TOKEN
       - BUILDKITE
       - BUILDKITE_REPO
       - BUILDKITE_BRANCH
       - BUILDKITE_PULL_REQUEST
       - REPO_RELATIONSHIPS
+      - REPO_WHITELIST
