@@ -10,7 +10,7 @@ const get = require('just-safe-get');
 const {Probot} = require('probot');
 
 const WHITELIST = new Set(
-  (process.env.REPO_WHITELIST || '').split(/, ?/)
+  (process.env.PROBOT_REPO_WHITELIST || '').split(/, ?/)
 );
 
 // this behaves exactly like the `probot run` command, except it
