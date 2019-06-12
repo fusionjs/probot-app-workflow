@@ -28,15 +28,6 @@
     jsonwebtoken "^8.3.0"
     lru-cache "^5.1.1"
 
-"@octokit/app@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@octokit/app/-/app-3.0.0.tgz#c2f83f302805299b46ac40cbfea568e1297e583c"
-  integrity sha512-zCj5u37H1DOhedVVVI4C/kpxXO5S/nxM25O+KnC7DT1Hf3rFWO+SDLz757IPRu9j6Br4L23YbmDpV5bvCL85eA==
-  dependencies:
-    "@octokit/request" "^4.1.0"
-    jsonwebtoken "^8.3.0"
-    lru-cache "^5.1.1"
-
 "@octokit/endpoint@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@octokit/endpoint/-/endpoint-4.0.0.tgz#97032a6690ef1cf9576ab1b1582c0ac837e3b5b6"
@@ -84,14 +75,6 @@
   dependencies:
     bottleneck "^2.15.3"
 
-"@octokit/request-error@^1.0.1":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@octokit/request-error/-/request-error-1.0.2.tgz#e6dbc5be13be1041ef8eca9225520982add574cf"
-  integrity sha512-T9swMS/Vc4QlfWrvyeSyp/GjhXtYaBzCcibjGywV4k4D2qVrQKfEMPy8OxMDEj7zkIIdpHwqdpVbKCvnUPqkXw==
-  dependencies:
-    deprecation "^2.0.0"
-    once "^1.4.0"
-
 "@octokit/request@3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@octokit/request/-/request-3.0.3.tgz#ace63b5ea196cc00ad27f3fbe5c13a9698681ec8"
@@ -115,19 +98,6 @@
     node-fetch "^2.3.0"
     once "^1.4.0"
     universal-user-agent "^2.0.1"
-
-"@octokit/request@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@octokit/request/-/request-4.1.0.tgz#e85dc377113baf2fe24433af8feb20e8a32e21b0"
-  integrity sha512-RvpQAba4i+BNH0z8i0gPRc1ShlHidj4puQjI/Tno6s+Q3/Mzb0XRSHJiOhpeFrZ22V7Mwjq1E7QS27P5CgpWYA==
-  dependencies:
-    "@octokit/endpoint" "^5.1.0"
-    "@octokit/request-error" "^1.0.1"
-    deprecation "^2.0.0"
-    is-plain-object "^3.0.0"
-    node-fetch "^2.3.0"
-    once "^1.4.0"
-    universal-user-agent "^2.1.0"
 
 "@octokit/rest@^16.25.0":
   version "16.25.4"
@@ -1514,11 +1484,6 @@ deprecation@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deprecation/-/deprecation-1.0.1.tgz#2df79b79005752180816b7b6e079cbd80490d711"
   integrity sha512-ccVHpE72+tcIKaGMql33x5MAjKQIZrk+3x2GbJ7TeraUCZWHoT+KSZpoC+JQFsUBlSTXUrBaGiF0j6zVTepPLg==
-
-deprecation@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/deprecation/-/deprecation-2.0.0.tgz#dd0427cd920c78bc575ec39dab2f22e7c304fb9d"
-  integrity sha512-lbQN037mB3VfA2JFuguM5GCJ+zPinMeCrFe+AfSZ6eqrnJA/Fs+EYMnd6Nb2mn9lf2jO9xwEd9o9lic+D4vkcw==
 
 destroy@~1.0.4:
   version "1.0.4"
@@ -4135,13 +4100,14 @@ probot-app-merge-pr@^1.1.2-0:
   dependencies:
     probot "^9.2.10"
 
-probot-app-monorepo-sync@^1.0.0-1:
-  version "1.0.0-1"
-  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-1.0.0-1.tgz#1bb275396c7e278f43a8dcb3b34a5f3cbe58a9d8"
-  integrity sha512-5OFAo5b9bXOr5npS9SgNk3p2UBbDopwHezdjDW8Tug76DhB44a+megJvC1pz5zzRLqd7/hTvzTsfvKOo58qbgA==
+probot-app-monorepo-sync@^1.0.0-2:
+  version "1.0.0-2"
+  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-1.0.0-2.tgz#2f4b09a5c62933f901b5ee94b889b5316d134475"
+  integrity sha512-oLg9rRcIzUfJrD5TsHU7LBoEk9PBLz6jMhRFlt0l1efmgQx2moohoDFjq2g7dr4g6/AuD9hjuObyNYtRjINejw==
   dependencies:
-    "@octokit/app" "^3.0.0"
-    "@octokit/request" "^4.1.0"
+    "@octokit/app" "^2.2.4"
+    "@octokit/plugin-throttling" "^2.3.0"
+    "@octokit/rest" "^16.25.0"
     esm "^3.2.22"
     just-index "^2.1.0"
     just-pick "^2.1.0"
@@ -5164,13 +5130,6 @@ universal-user-agent@^2.0.0, universal-user-agent@^2.0.1, universal-user-agent@^
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/universal-user-agent/-/universal-user-agent-2.0.3.tgz#9f6f09f9cc33de867bb720d84c08069b14937c6c"
   integrity sha512-eRHEHhChCBHrZsA4WEhdgiOKgdvgrMIHwnwnqD0r5C6AO8kwKcG7qSku3iXdhvHL3YvsS9ZkSGN8h/hIpoFC8g==
-  dependencies:
-    os-name "^3.0.0"
-
-universal-user-agent@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/universal-user-agent/-/universal-user-agent-2.1.0.tgz#5abfbcc036a1ba490cb941f8fd68c46d3669e8e4"
-  integrity sha512-8itiX7G05Tu3mGDTdNY2fB4KJ8MgZLS54RdG6PkkfwMAavrXu1mV/lls/GABx9O3Rw4PnTtasxrvbMQoBYY92Q==
   dependencies:
     os-name "^3.0.0"
 
