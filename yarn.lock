@@ -4100,10 +4100,10 @@ probot-app-merge-pr@^1.1.2-0:
   dependencies:
     probot "^9.2.10"
 
-probot-app-monorepo-sync@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-1.1.0.tgz#6c354156b510c2a053cd33e0fc8c502dac19d787"
-  integrity sha512-rfqV6OEyXvp9DotIIUS+BkHo+uQNam1e68oHj3QvAV8oI6cw7oXx8nz0IavF3tQXvpDBviq1l8sCETlgud4l5A==
+probot-app-monorepo-sync@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-1.1.1.tgz#3d2e6de5fbc605f99cde9b6dbbe7dca8c1448098"
+  integrity sha512-hhnECKORdHmMHC4dUkBkjc8nO3KfkDTJCZqJeyYYYRNERih/JaBDESSj2YcAHAr576Suip89fd1MOhFzSnmiBg==
   dependencies:
     "@octokit/app" "^2.2.4"
     "@octokit/plugin-throttling" "^2.3.0"
