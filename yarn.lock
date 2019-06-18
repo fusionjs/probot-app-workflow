@@ -28,6 +28,15 @@
     jsonwebtoken "^8.3.0"
     lru-cache "^5.1.1"
 
+"@octokit/app@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@octokit/app/-/app-3.0.1.tgz#072e48127eb3c004f9a8ae9c81bfbf8c1850b41d"
+  integrity sha512-uUN1XCzHJTqiKbeTKAuTYAiu/IYV5uN606smwGZsg//8xVHvlwdv7x9nwpYAs32addRk+TZB55nitwgQlzt1jw==
+  dependencies:
+    "@octokit/request" "^4.1.0"
+    jsonwebtoken "^8.3.0"
+    lru-cache "^5.1.1"
+
 "@octokit/endpoint@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@octokit/endpoint/-/endpoint-4.0.0.tgz#97032a6690ef1cf9576ab1b1582c0ac837e3b5b6"
@@ -48,12 +57,30 @@
     universal-user-agent "^2.0.1"
     url-template "^2.0.8"
 
+"@octokit/endpoint@^5.1.7":
+  version "5.1.7"
+  resolved "https://registry.yarnpkg.com/@octokit/endpoint/-/endpoint-5.1.7.tgz#cfbd473a6adf5fea747520972e1af676406f7c26"
+  integrity sha512-MfsXHx9z9EPxLYSf7PYuzWvVZTotx+/QTFk7UMp4Fv83k3QrvmovEjP0pl141g+Uq/w9CcDuuXhsiq4X3oxVsA==
+  dependencies:
+    deepmerge "3.2.1"
+    is-plain-object "^3.0.0"
+    universal-user-agent "^2.1.0"
+    url-template "^2.0.8"
+
 "@octokit/graphql@2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@octokit/graphql/-/graphql-2.1.1.tgz#29e5fb26d1af4a365898641fceff7b3fd929f08b"
   integrity sha512-BVRBRFulb2H42u/Slt+x59tFw7lRf94xX9/Dv++mYDmYRXaY6LIOzrCTY2GYOVQVcoBjPhfEiYAMuJUCPNoe2g==
   dependencies:
     "@octokit/request" "^3.0.0"
+    universal-user-agent "^2.0.3"
+
+"@octokit/graphql@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@octokit/graphql/-/graphql-2.1.2.tgz#220bc814fbebd35b3796db4788b353b491dd6575"
+  integrity sha512-Vq+Ypj0rQNpeyvh3dhqyyOItyr4KUW4Zu/tdg00PQdlH/iOX+RJQBcDMRMg1oGwY5g2zVtXuhSMFCgR6QoujxA==
+  dependencies:
+    "@octokit/request" "^4.1.0"
     universal-user-agent "^2.0.3"
 
 "@octokit/plugin-enterprise-compatibility@^1.0.0":
@@ -74,6 +101,14 @@
   integrity sha512-0bYfgQdqAtWiqXvS6oKMiousTno+e3pFoaYS57LpAp8p56Far49/vpGvbEvBUuNyoUFgOcTGm5WTpO1IPptHuQ==
   dependencies:
     bottleneck "^2.15.3"
+
+"@octokit/request-error@^1.0.1":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@octokit/request-error/-/request-error-1.0.4.tgz#15e1dc22123ba4a9a4391914d80ec1e5303a23be"
+  integrity sha512-L4JaJDXn8SGT+5G0uX79rZLv0MNJmfGa4vb4vy1NnpjSnWDLJRy6m90udGwvMmavwsStgbv2QNkPzzTCMmL+ig==
+  dependencies:
+    deprecation "^2.0.0"
+    once "^1.4.0"
 
 "@octokit/request@3.0.3":
   version "3.0.3"
@@ -98,6 +133,19 @@
     node-fetch "^2.3.0"
     once "^1.4.0"
     universal-user-agent "^2.0.1"
+
+"@octokit/request@^4.1.0":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@octokit/request/-/request-4.1.1.tgz#614262214f48417b4d3b14e047d09a9c8e2f7a09"
+  integrity sha512-LOyL0i3oxRo418EXRSJNk/3Q4I0/NKawTn6H/CQp+wnrG1UFLGu080gSsgnWobhPo5BpUNgSQ5BRk5FOOJhD1Q==
+  dependencies:
+    "@octokit/endpoint" "^5.1.0"
+    "@octokit/request-error" "^1.0.1"
+    deprecation "^2.0.0"
+    is-plain-object "^3.0.0"
+    node-fetch "^2.3.0"
+    once "^1.4.0"
+    universal-user-agent "^2.1.0"
 
 "@octokit/rest@^16.25.0":
   version "16.25.4"
@@ -1424,6 +1472,11 @@ deepmerge@3.2.0:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.2.0.tgz#58ef463a57c08d376547f8869fdc5bcee957f44e"
   integrity sha512-6+LuZGU7QCNUnAJyX8cIrlzoEgggTM6B7mm+znKOX4t5ltluT9KLjN6g61ECMS0LTsLW7yDpNoxhix5FZcrIow==
 
+deepmerge@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.2.1.tgz#76a1f47854bcfcd66ee9a948d110540a8e12b261"
+  integrity sha512-+hbDSzTqEW0fWgnlKksg7XAOtT+ddZS5lHZJ6f6MdixRs9wQy+50fm1uUCVb1IkvjLUYX/SfFO021ZNwriURTw==
+
 default-require-extensions@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/default-require-extensions/-/default-require-extensions-1.0.0.tgz#f37ea15d3e13ffd9b437d33e1a75b5fb97874cb8"
@@ -1484,6 +1537,11 @@ deprecation@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deprecation/-/deprecation-1.0.1.tgz#2df79b79005752180816b7b6e079cbd80490d711"
   integrity sha512-ccVHpE72+tcIKaGMql33x5MAjKQIZrk+3x2GbJ7TeraUCZWHoT+KSZpoC+JQFsUBlSTXUrBaGiF0j6zVTepPLg==
+
+deprecation@^2.0.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/deprecation/-/deprecation-2.3.1.tgz#6368cbdb40abf3373b525ac87e4a260c3a700919"
+  integrity sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ==
 
 destroy@~1.0.4:
   version "1.0.4"
@@ -2155,6 +2213,11 @@ has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
+
+has-flag@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
+  integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
 has-symbols@^1.0.0:
   version "1.0.0"
@@ -3093,6 +3156,16 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.2.3"
     verror "1.10.0"
+
+just-clone@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/just-clone/-/just-clone-3.1.0.tgz#10efc422e9b041355c43b8076d7b768b7a09fbbd"
+  integrity sha512-sROn15yHaeNYSTG49HmfbQLtsZvMBb2COvVofNXbeUXx6GkERkdjG3dfejD0fe78gdHJLyS+fOz897H73S8LqA==
+
+just-flatten-it@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/just-flatten-it/-/just-flatten-it-2.1.0.tgz#2514337cc77ee3462869fee3d939b06ec1fd7986"
+  integrity sha512-mX3NUt/LF6EzohLJZXhywCwz2zqdhx6wVkEu6UfUx00lVQlSB6SBV1O+/Le15NfsimrWRD82H69ZkSVQZffhmw==
 
 just-index@^2.1.0:
   version "2.1.0"
@@ -4100,22 +4173,26 @@ probot-app-merge-pr@^1.1.2-0:
   dependencies:
     probot "^9.2.10"
 
-probot-app-monorepo-sync@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-1.1.4.tgz#64bd511b04a707c101d7155ad160bcad3e73d43f"
-  integrity sha512-bCYc5TYTbn1B6z8TCsfUo59jCc1qzLkzO4oL5OHDOYexXb3OkJh89zaetbPyPbPfx2Hz0N6Vb3bdyzy+LCzq2A==
+probot-app-monorepo-sync@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/probot-app-monorepo-sync/-/probot-app-monorepo-sync-1.2.0.tgz#c5916a1c0aeb070d54b78e0d57f49e16ff03ba49"
+  integrity sha512-28fVX8QvNPGoEwQqvUQF6luES/CPutynnE3NyBfTYth36ktQSROde8eC/ev3z97QROV+rzzjIgrY++drdHnvEQ==
   dependencies:
-    "@octokit/app" "^2.2.4"
+    "@octokit/app" "^3.0.1"
+    "@octokit/endpoint" "^5.1.7"
     "@octokit/plugin-throttling" "^2.3.0"
     "@octokit/rest" "^16.25.0"
     esm "^3.2.22"
+    just-clone "^3.1.0"
+    just-flatten-it "^2.1.0"
     just-index "^2.1.0"
     just-pick "^2.1.0"
     just-range "^2.1.0"
     just-safe-get "^1.3.0"
     just-safe-set "^2.1.0"
+    lru-cache "^5.1.1"
     p-queue "^4.0.0"
-    probot "^9.2.10"
+    probot "^9.2.15"
 
 probot-app-pr-title@^1.1.8-1:
   version "1.1.8-1"
@@ -4161,6 +4238,45 @@ probot@^9.2.10:
     resolve "^1.4.0"
     semver "^6.0.0"
     supports-color "^6.0.0"
+    update-dotenv "^1.1.0"
+    uuid "^3.2.1"
+
+probot@^9.2.15:
+  version "9.2.15"
+  resolved "https://registry.yarnpkg.com/probot/-/probot-9.2.15.tgz#9ce82213d78860866773b092531ca78ece09214b"
+  integrity sha512-tZF1IdpbigwODWSGZEvO+6xGKemzNhRtNJMYs2sa8nPajfhZsQ0NX/g04bfX9YYWuBjC2gn7yNHRLG2+DLSzzw==
+  dependencies:
+    "@octokit/app" "^3.0.1"
+    "@octokit/graphql" "2.1.2"
+    "@octokit/plugin-enterprise-compatibility" "^1.0.0"
+    "@octokit/plugin-retry" "^2.1.1"
+    "@octokit/plugin-throttling" "^2.3.0"
+    "@octokit/rest" "^16.25.0"
+    "@octokit/webhooks" "^6.0.0"
+    "@types/supports-color" "^5.3.0"
+    bottleneck "^2.15.3"
+    bunyan "^1.8.12"
+    bunyan-format "^0.2.1"
+    bunyan-sentry-stream "^1.1.0"
+    cache-manager "^2.4.0"
+    commander "^2.19.0"
+    dotenv "~8.0.0"
+    eventsource "^1.0.7"
+    express "^4.16.2"
+    express-async-errors "^3.0.0"
+    hbs "^4.0.3"
+    ioredis "^4.5.1"
+    is-base64 "0.1.0"
+    js-yaml "^3.13.1"
+    jsonwebtoken "^8.1.0"
+    octokit-pagination-methods "1.1.0"
+    pkg-conf "^3.0.0"
+    promise-events "^0.1.3"
+    qs "^6.5.2"
+    raven "^2.4.2"
+    resolve "^1.4.0"
+    semver "^6.0.0"
+    supports-color "^7.0.0"
     update-dotenv "^1.1.0"
     uuid "^3.2.1"
 
@@ -4961,6 +5077,13 @@ supports-color@^6.0.0:
   dependencies:
     has-flag "^3.0.0"
 
+supports-color@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-7.0.0.tgz#f2392c50ab35bb3cae7beebf24d254a19f880c06"
+  integrity sha512-WRt32iTpYEZWYOpcetGm0NPeSvaebccx7hhS/5M6sAiqnhedtFCHFxkjzZlJvFNCPowiKSFGiZk5USQDFy83vQ==
+  dependencies:
+    has-flag "^4.0.0"
+
 symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
@@ -5130,6 +5253,13 @@ universal-user-agent@^2.0.0, universal-user-agent@^2.0.1, universal-user-agent@^
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/universal-user-agent/-/universal-user-agent-2.0.3.tgz#9f6f09f9cc33de867bb720d84c08069b14937c6c"
   integrity sha512-eRHEHhChCBHrZsA4WEhdgiOKgdvgrMIHwnwnqD0r5C6AO8kwKcG7qSku3iXdhvHL3YvsS9ZkSGN8h/hIpoFC8g==
+  dependencies:
+    os-name "^3.0.0"
+
+universal-user-agent@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/universal-user-agent/-/universal-user-agent-2.1.0.tgz#5abfbcc036a1ba490cb941f8fd68c46d3669e8e4"
+  integrity sha512-8itiX7G05Tu3mGDTdNY2fB4KJ8MgZLS54RdG6PkkfwMAavrXu1mV/lls/GABx9O3Rw4PnTtasxrvbMQoBYY92Q==
   dependencies:
     os-name "^3.0.0"
 
