@@ -4104,13 +4104,6 @@ probot-app-deploy@^1.1.1-0:
     node-fetch "^2.2.0"
     probot "^9.2.10"
 
-probot-app-merge-pr@^1.1.2-0:
-  version "1.1.2-0"
-  resolved "https://registry.yarnpkg.com/probot-app-merge-pr/-/probot-app-merge-pr-1.1.2-0.tgz#ceb2254c08bbbfe58a5913593026b0218d25616e"
-  integrity sha512-yzjmy6kya03SyTyMxTI3AN8O2jL28iWC8E9P/7tJ1ZTIrHjm8lsjyrnyeNMTDmNX70p49WMQqKD2z8axozfaEA==
-  dependencies:
-    probot "^9.2.10"
-
 probot-app-pr-title@^1.1.8-1:
   version "1.1.8-1"
   resolved "https://registry.yarnpkg.com/probot-app-pr-title/-/probot-app-pr-title-1.1.8-1.tgz#8a55f82023ef20d5a14015e9158bebf1b5467ef9"
