@@ -15,7 +15,7 @@
     "probot": "^9.2.15",
     "probot-app-delete-merged-branch": "^1.0.2-0",
     "probot-app-deploy": "^1.1.1-0",
-    "probot-app-pr-title": "^1.1.8-1"
+    "probot-app-pr-title": "^1.1.9"
   },
   "probot": {
     "apps": [
