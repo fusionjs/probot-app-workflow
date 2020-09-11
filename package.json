@@ -11,7 +11,7 @@
     "body-parser": "^1.19.0",
     "express": "^4.16.2",
     "just-safe-get": "^1.3.0",
-    "node-fetch": "^2.2.0",
+    "node-fetch": "^2.6.1",
     "probot": "^9.2.15",
     "probot-app-delete-merged-branch": "^1.0.2-0",
     "probot-app-deploy": "^1.1.1-0",
